@@ -1,0 +1,1747 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LangPrepHub 投资计划书 2026</title>
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:root{
+  --dark:#1a1a2e;--accent:#00c9a7;--purple:#6c63ff;--gold:#ffd700;
+  --txt:#333;--sub:#666;--bg:#f8f9fa;--card:#fff;
+  --red:#ff6b6b;--blue:#4a90d9;--orange:#ff9f43;
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;color:var(--txt);line-height:1.6;background:#fff;}
+.section{min-height:100vh;padding:60px 5%;display:flex;flex-direction:column;justify-content:center;}
+.section-dark{background:var(--dark);color:#fff;}
+.section-light{background:var(--bg);}
+.section-white{background:#fff;}
+h1{font-size:2.8rem;margin-bottom:.5rem;}
+h2{font-size:2rem;margin-bottom:1rem;}
+h3{font-size:1.4rem;margin-bottom:.8rem;}
+.accent{color:var(--accent);}
+.purple{color:var(--purple);}
+.gold{color:var(--gold);}
+.red{color:var(--red);}
+.tag{display:inline-block;background:var(--accent);color:#fff;padding:4px 14px;border-radius:20px;font-size:.85rem;margin:4px 2px;}
+.tag-purple{background:var(--purple);}
+.tag-gold{background:var(--gold);color:var(--dark);}
+.tag-red{background:var(--red);}
+.container{max-width:1300px;margin:0 auto;width:100%;}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:24px;}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+.card{background:var(--card);border-radius:16px;padding:28px;box-shadow:0 4px 24px rgba(0,0,0,.08);transition:transform .2s;}
+.card:hover{transform:translateY(-4px);}
+.card-dark{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);}
+.card h3{margin-bottom:12px;}
+.stat{font-size:2.6rem;font-weight:800;color:var(--accent);line-height:1.1;}
+.stat-purple{color:var(--purple);}
+.stat-gold{color:var(--gold);}
+.stat-red{color:var(--red);}
+table{width:100%;border-collapse:collapse;font-size:.88rem;}
+table th{background:var(--dark);color:#fff;padding:10px 12px;text-align:left;font-weight:600;white-space:nowrap;}
+table td{padding:9px 12px;border-bottom:1px solid #e8e8e8;}
+table tr:hover{background:rgba(0,201,167,.05);}
+table .total-row{background:rgba(0,201,167,.1);font-weight:700;}
+table .total-row td{border-bottom:2px solid var(--accent);}
+table .lang-header{background:rgba(108,99,255,.08);font-weight:700;}
+table .lang-header td{border-top:2px solid var(--purple);color:var(--purple);}
+.badge{display:inline-block;padding:2px 8px;border-radius:10px;font-size:.75rem;font-weight:600;}
+.badge-green{background:#e6faf5;color:#00a878;}
+.badge-red{background:#ffe8e8;color:#d9534f;}
+.badge-yellow{background:#fff8e1;color:#f59e0b;}
+.badge-blue{background:#e8f0fe;color:#4a90d9;}
+.note-box{background:linear-gradient(135deg,rgba(0,201,167,.08),rgba(108,99,255,.08));border-left:4px solid var(--accent);padding:16px 20px;border-radius:0 12px 12px 0;margin:20px 0;font-size:.9rem;}
+.warn-box{background:linear-gradient(135deg,rgba(255,159,67,.1),rgba(255,107,107,.08));border-left:4px solid var(--orange);padding:16px 20px;border-radius:0 12px 12px 0;margin:20px 0;}
+.bar-chart{display:flex;align-items:flex-end;gap:8px;padding:10px 0;}
+.bar-col{display:flex;flex-direction:column;align-items:center;flex:1;}
+.bar{width:100%;border-radius:8px 8px 0 0;min-height:4px;transition:height .5s;}
+.bar-label{font-size:.7rem;color:var(--sub);margin-top:6px;text-align:center;white-space:nowrap;}
+.bar-value{font-size:.72rem;font-weight:700;color:var(--accent);margin-bottom:4px;text-align:center;}
+.flywheel{display:grid;grid-template-columns:1fr 80px 1fr;grid-template-rows:auto 60px auto;gap:0;align-items:center;justify-items:center;max-width:900px;margin:30px auto;}
+.fw-box{background:var(--card);border-radius:16px;padding:24px;box-shadow:0 4px 20px rgba(0,0,0,.08);text-align:center;width:100%;border-top:4px solid var(--accent);}
+.fw-box.purple-top{border-top-color:var(--purple);}
+.fw-arrow{font-size:2.2rem;color:var(--accent);}
+.pricing-tbl{width:100%;border-collapse:collapse;}
+.pricing-tbl td{padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.1);font-size:.9rem;}
+.pricing-tbl .price-val{text-align:right;font-weight:700;color:var(--accent);white-space:nowrap;}
+.pricing-tbl-light td{border-bottom-color:#e8e8e8;}
+.pricing-tbl-light .price-val{color:var(--purple);}
+.phase-timeline{display:flex;gap:24px;margin:30px 0;}
+.phase-item{flex:1;position:relative;padding:24px;background:var(--card);border-radius:16px;box-shadow:0 2px 16px rgba(0,0,0,.06);}
+.phase-item::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:var(--accent);border-radius:16px 16px 0 0;}
+.comp-card{background:var(--card);border-radius:12px;padding:20px;box-shadow:0 2px 12px rgba(0,0,0,.06);border-left:4px solid var(--accent);}
+.comp-card.warn{border-left-color:var(--orange);}
+.comp-card.danger{border-left-color:var(--red);}
+.subtitle{font-size:1.1rem;color:var(--sub);margin-bottom:30px;}
+.divider{width:60px;height:4px;background:var(--accent);border-radius:2px;margin:16px 0;}
+.icon-flat{font-size:1.5rem;vertical-align:-0.15em;margin-right:4px;}
+.icon-big{font-size:2.5rem;}
+.section-title-bar{background:var(--dark);color:#fff;padding:12px 24px;border-radius:12px;margin-bottom:24px;display:flex;align-items:center;gap:12px;}
+.section-title-bar h2{margin:0;font-size:1.5rem;}
+.section-title-bar i{font-size:1.5rem;}
+.legend{display:flex;gap:16px;flex-wrap:wrap;margin:12px 0;font-size:.82rem;}
+.legend-item{display:flex;align-items:center;gap:4px;}
+.cost-compare{display:grid;grid-template-columns:1fr 1fr;gap:0;}
+.cost-col{padding:20px;}
+.cost-col:first-child{border-right:2px dashed #e0e0e0;}
+.cost-total{font-size:1.3rem;font-weight:800;text-align:center;padding:12px;border-radius:12px;margin-top:12px;}
+.highlight-row{background:rgba(0,201,167,.08);}
+@media(max-width:900px){
+  .grid2,.grid3,.grid4{grid-template-columns:1fr;}
+  .phase-timeline{flex-direction:column;}
+  h1{font-size:2rem;}h2{font-size:1.5rem;}
+  .stat{font-size:2rem;}
+  .flywheel{grid-template-columns:1fr;grid-template-rows:auto;}
+  table{font-size:.78rem;}
+  .cost-compare{grid-template-columns:1fr;}
+  .cost-col:first-child{border-right:none;border-bottom:2px dashed #e0e0e0;}
+}
+
+/* ===== PROBLEM-SOLUTION SECTION STYLES ===== */
+.section-gradient{background:linear-gradient(135deg,#1a1a2e 0%,#2d2b55 100%);color:#fff;}
+.section-num{font-size:.85rem;letter-spacing:3px;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:8px;}
+.pain-card{background:#fff;border-radius:16px;padding:28px;box-shadow:0 4px 24px rgba(0,0,0,.06);position:relative;overflow:hidden;}
+.pain-card::before{content:'';position:absolute;top:0;left:0;right:0;height:5px;}
+.pain-card.pain-red::before{background:linear-gradient(90deg,#ff6b6b,#ff8e8e);}
+.pain-card.pain-orange::before{background:linear-gradient(90deg,#ff9f43,#ffbe76);}
+.pain-card.pain-blue::before{background:linear-gradient(90deg,#4a90d9,#74b9ff);}
+.pain-label{display:inline-block;padding:4px 12px;border-radius:20px;font-size:.8rem;font-weight:700;margin-bottom:12px;}
+.pain-label-c{background:#ffe8e8;color:#d9534f;}
+.pain-label-b{background:#e8f0fe;color:#4a90d9;}
+.pain-keyword{font-size:2.2rem;font-weight:900;margin:8px 0 12px;}
+details.data-collapse{margin:16px 0;border-radius:12px;overflow:hidden;border:1px solid #e8e8e8;}
+details.data-collapse summary{padding:14px 20px;background:linear-gradient(135deg,rgba(0,201,167,.06),rgba(108,99,255,.05));cursor:pointer;font-weight:600;font-size:.92rem;display:flex;align-items:center;gap:8px;list-style:none;user-select:none;}
+details.data-collapse summary::-webkit-details-marker{display:none;}
+details.data-collapse summary::before{content:'▸';font-size:1rem;transition:transform .2s;color:var(--accent);}
+details.data-collapse[open] summary::before{transform:rotate(90deg);}
+details.data-collapse[open] summary{border-bottom:1px solid #e8e8e8;}
+.collapse-body{padding:16px 20px;background:#fafbfc;overflow-x:auto;}
+.tm-table{width:100%;border-collapse:collapse;font-size:.88rem;border-radius:12px;overflow:hidden;}
+.tm-table th{background:var(--dark);color:#fff;padding:12px 14px;text-align:center;font-weight:600;}
+.tm-table th:first-child{text-align:left;}
+.tm-table td{padding:11px 14px;border-bottom:1px solid #eee;text-align:center;}
+.tm-table td:first-child{text-align:left;font-weight:600;}
+.tm-table tr:nth-child(even){background:#fafbfc;}
+.ai-badge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:.78rem;font-weight:700;}
+.ai-extreme{background:#ffe0e0;color:#d9534f;}
+.ai-high{background:#fff3cd;color:#b8860b;}
+.ai-medium{background:#e6faf5;color:#00a878;}
+.hero-compare{background:linear-gradient(135deg,#1a1a2e,#2d2b55);border-radius:20px;padding:40px 32px;color:#fff;margin:20px 0;}
+.compare-item{display:grid;grid-template-columns:160px 1fr 130px 180px;align-items:center;gap:16px;padding:18px 0;border-bottom:1px solid rgba(255,255,255,.1);}
+.compare-item:last-child{border-bottom:none;}
+.compare-label{font-weight:600;font-size:.95rem;}
+.compare-bars{display:flex;flex-direction:column;gap:6px;}
+.cb-row{display:flex;align-items:center;gap:8px;font-size:.82rem;}
+.cb-bar{height:24px;border-radius:6px;display:flex;align-items:center;padding:0 10px;font-weight:700;font-size:.78rem;white-space:nowrap;min-width:fit-content;}
+.cb-bar.human{background:linear-gradient(90deg,#ff6b6b,#ff8e8e);color:#fff;}
+.cb-bar.ai{background:linear-gradient(90deg,#00c9a7,#4aedc4);color:#fff;}
+.cb-tag{width:28px;font-size:.72rem;color:rgba(255,255,255,.6);text-align:right;flex-shrink:0;}
+.compare-drop{text-align:center;}
+.compare-drop .drop-num{font-size:1.5rem;font-weight:900;color:var(--accent);}
+.compare-drop .drop-text{font-size:.72rem;color:rgba(255,255,255,.5);}
+.compare-save{text-align:right;}
+.compare-save .save-num{font-size:1.1rem;font-weight:800;color:var(--gold);}
+.compare-save .save-label{font-size:.72rem;color:rgba(255,255,255,.5);}
+.compare-total-bar{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:24px;padding:24px;background:rgba(0,201,167,.12);border-radius:16px;border:1px solid rgba(0,201,167,.3);}
+.total-big{font-size:2.2rem;font-weight:900;color:var(--accent);}
+.total-mid{font-size:1.1rem;font-weight:700;color:var(--gold);}
+.insight-box{background:linear-gradient(135deg,rgba(0,201,167,.1),rgba(108,99,255,.06));border-radius:16px;padding:24px;margin:16px 0;border-left:5px solid var(--accent);}
+.insight-box.gold-box{border-left-color:var(--gold);background:linear-gradient(135deg,rgba(255,215,0,.08),rgba(255,159,67,.06));}
+.insight-box h4{color:var(--accent);margin-bottom:8px;font-size:1rem;}
+.insight-box.gold-box h4{color:var(--orange);}
+.lifecycle-wrap{overflow-x:auto;padding:20px 0;}
+.lifecycle-flow{display:flex;align-items:flex-start;min-width:900px;gap:0;}
+.lf-node{flex:1;display:flex;flex-direction:column;align-items:center;position:relative;}
+.lf-circle{width:72px;height:72px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:.8rem;color:#fff;text-align:center;line-height:1.2;border:3px solid #fff;box-shadow:0 4px 16px rgba(0,0,0,.15);}
+.lf-arrow{display:flex;align-items:center;padding-top:22px;}
+.lf-arrow i{font-size:1.3rem;color:var(--accent);}
+.langhub-bar{margin-top:24px;padding:20px;background:linear-gradient(90deg,var(--accent),var(--purple));border-radius:16px;text-align:center;color:#fff;font-size:1.1rem;font-weight:700;box-shadow:0 4px 20px rgba(0,201,167,.3);}
+.langhub-bar .big{font-size:1.8rem;display:block;margin-bottom:4px;}
+.mission-banner{background:linear-gradient(135deg,#1a1a2e,#2d2b55);border-radius:20px;padding:48px 40px;color:#fff;text-align:center;margin:30px 0;}
+.mission-banner .mission-text{font-size:1.2rem;line-height:1.8;max-width:900px;margin:0 auto;}
+.mission-banner .mission-highlight{font-size:1.8rem;font-weight:900;color:var(--accent);display:block;margin:16px 0;}
+.mission-banner .mission-sub{font-size:1.1rem;color:var(--gold);font-weight:700;margin-top:8px;}
+.stat-row{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin:30px 0;}
+.stat-item{text-align:center;padding:20px 28px;background:rgba(255,255,255,.08);border-radius:16px;border:1px solid rgba(255,255,255,.15);min-width:160px;}
+.stat-item .si-num{font-size:2rem;font-weight:900;color:var(--accent);display:block;}
+.stat-item .si-label{font-size:.82rem;color:rgba(255,255,255,.6);margin-top:4px;}
+@media(max-width:900px){
+  .pain-keyword{font-size:1.7rem;}
+  .compare-item{grid-template-columns:1fr;gap:8px;}
+  .compare-drop,.compare-save{text-align:left;}
+  .compare-total-bar{flex-direction:column;gap:12px;}
+  .total-big{font-size:1.6rem;}
+  .hero-compare{padding:24px 16px;}
+  .mission-banner{padding:32px 20px;}
+  .mission-banner .mission-highlight{font-size:1.3rem;}
+  .stat-row{gap:12px;}
+  .stat-item{min-width:120px;padding:14px 18px;}
+  .stat-item .si-num{font-size:1.5rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- ============ COVER ============ -->
+<div class="section section-dark" style="text-align:center;">
+<div class="container">
+  <p style="font-size:1rem;letter-spacing:4px;color:var(--accent);margin-bottom:12px;">LangPrepHub</p>
+  <h1 style="font-size:3.2rem;">全球首个 AI 全栈语言考试备考平台</h1>
+  <div class="divider" style="margin:20px auto;"></div>
+  <p style="font-size:1.1rem;color:rgba(255,255,255,.75);margin-bottom:24px;">
+    写作批改 · 口语对练 · 听写训练 · 词汇系统 · 动词变位 · 同义反义 · AI 导师
+  </p>
+  <p class="accent" style="font-size:1.3rem;font-weight:700;">非英语语言考试AI备考 — 全球唯一全栈解决方案</p>
+  <p style="margin-top:30px;color:rgba(255,255,255,.5);">投资计划书 · 种子轮 · 2026年4月 · v3.0 综合版</p>
+  <p style="color:rgba(255,255,255,.4);margin-top:6px;">langprephub.com</p>
+</div>
+</div>
+
+<!-- ============ PROBLEM: PAIN POINTS ============ -->
+<div class="section section-light" id="problem">
+<div class="container">
+  <p class="section-num">01 · 行业痛点</p>
+  <h2 style="font-size:2.2rem;line-height:1.4;">天价 · 碎片 · 低效<br><span style="font-size:1.4rem;color:var(--sub);font-weight:400;">—— 万亿语言教育市场亟待重构</span></h2>
+  <p class="subtitle" style="line-height:1.7;">全球数千万有实际语言需求的用户与严肃学习者，花费数万乃至数十万元依赖昂贵人工辅导备考考试，被迫下载 3–5 个 APP 拼凑日常自学流程。</p>
+
+  <div class="grid3" style="margin-bottom:30px;">
+    <div class="pain-card pain-red">
+      <span class="pain-label pain-label-c">C 端痛点</span>
+      <div class="pain-keyword" style="color:var(--red);">"贵！慢！"</div>
+      <p style="font-size:.92rem;color:var(--sub);margin-bottom:16px;">人工辅导价格高昂 + 课时周期漫长，学生承受巨大经济与时间成本。</p>
+      <div style="background:#fff5f5;padding:14px;border-radius:10px;font-size:.85rem;line-height:1.7;">
+        <strong>英语</strong>：0基础 → 雅思 6.5-7 ≈ <strong style="color:var(--red);">500课时</strong><br>
+        国内均价 ≈ <strong style="color:var(--red);">¥5.8万</strong> / 海外 ≈ <strong style="color:var(--red);">$17,000</strong><br><br>
+        <strong>小语种</strong>：0基础 → B2 ≈ <strong style="color:var(--red);">500-850课时</strong><br>
+        国内均价 ≈ <strong style="color:var(--red);">¥1.2万–4.8万</strong> / 海外 ≈ <strong style="color:var(--red);">$8K–13K</strong>
+      </div>
+    </div>
+    <div class="pain-card pain-orange">
+      <span class="pain-label pain-label-c">C 端痛点</span>
+      <div class="pain-keyword" style="color:var(--orange);">"乱！"</div>
+      <p style="font-size:.92rem;color:var(--sub);margin-bottom:16px;">学习工具碎片化，每位认真备考学生需拼凑多个 APP 才能覆盖全流程。</p>
+      <div style="background:#fff8f0;padding:14px;border-radius:10px;font-size:.85rem;line-height:1.7;">
+        <strong>人均安装</strong>：<strong style="color:var(--orange);">2–5 款 APP</strong><br>
+        年度订阅总计：<br>
+        国内 ≈ <strong style="color:var(--orange);">¥65–350 / 年</strong><br>
+        海外 ≈ <strong style="color:var(--orange);">$35–300 / 年</strong><br><br>
+        <span style="color:var(--sub);">不同 APP 之间数据不互通，学习进度割裂、体验差。</span>
+      </div>
+    </div>
+    <div class="pain-card pain-blue">
+      <span class="pain-label pain-label-b">B 端痛点</span>
+      <div class="pain-keyword" style="color:var(--blue);">"贵！少！难！"</div>
+      <p style="font-size:.92rem;color:var(--sub);margin-bottom:16px;">教育资源严重不足，机构运营成本高企，技术替代方案缺位。</p>
+      <div style="background:#f0f5ff;padding:14px;border-radius:10px;font-size:.85rem;line-height:1.7;">
+        <strong>资源少</strong>：高考日语考生 >50万，全国高中合规师资仅 ~5,000 人<br><br>
+        <strong>开发难</strong>：单项学习功能（如单词背诵）AI 前开发成本 ¥100万+，6 项功能*3语种 ><strong style="color:var(--blue);">¥400万-600万</strong><br><br>
+        <strong>效果差</strong>：AI前自动化批改质量低（参考"批改网"案例）
+      </div>
+    </div>
+  </div>
+
+  <details class="data-collapse">
+    <summary>📊 各语种国内外课时 + 花费对比（点击展开）</summary>
+    <div class="collapse-body">
+      <p style="font-size:.82rem;color:var(--sub);margin-bottom:12px;">基于 FSI / CEFR 标准换算，价格来源：各机构公开定价、italki平台均价</p>
+     <table>
+  <thead>
+    <tr><th>语种</th><th>难度</th><th>B2课时均值</th><th>国内大班 ¥/h</th><th>国内1v1 ¥/h</th><th>国际1v1 $/h</th><th>国内大班→B2</th><th>国内1v1→B2</th><th>国际1v1→B2</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>法语</strong></td><td>Cat.2 中</td><td>525h</td><td>95</td><td>215</td><td>29</td><td>¥49,875</td><td>¥112,875</td><td>$15,225</td></tr>
+    <tr><td><strong>西语</strong></td><td>Cat.1 易</td><td>525h</td><td>85</td><td>173</td><td>21</td><td>¥44,625</td><td>¥90,825</td><td>$11,025</td></tr>
+    <tr><td><strong>英语</strong></td><td>—</td><td>600h</td><td>95</td><td>150</td><td>26</td><td>¥57,000</td><td>¥90,000</td><td>$15,600</td></tr>
+    <tr><td><strong>德语</strong></td><td>Cat.2 中</td><td>650h</td><td>85</td><td>175</td><td>26</td><td>¥55,250</td><td>¥113,750</td><td>$16,900</td></tr>
+    <tr><td><strong>俄语</strong></td><td>Cat.3 难</td><td>850h</td><td>75</td><td>220</td><td>18</td><td>¥63,750</td><td>¥187,500</td><td>$15,300</td></tr>
+    <tr><td><strong>日语</strong></td><td>Cat.2 中</td><td>700h</td><td>85</td><td>165</td><td>25</td><td>¥59,500</td><td>¥115,500</td><td>$17,500</td></tr>
+  </tbody>
+</table>
+    </div>
+  </details>
+
+  <details class="data-collapse">
+    <summary>💰 一个学生从零到考试要花多少钱？（0 → B2 各语种总费用）</summary>
+    <div class="collapse-body">
+      <p style="font-size:.82rem;color:var(--sub);margin-bottom:12px;">场景：0→B2（达到 DELF B2 / 歌德 B2 / JLPT N2 水平，可申学/移民）</p>
+     <table>
+  <thead>
+    <tr><th>语种</th><th>所需课时</th><th>国内小班总费</th><th>国内1对1总费</th><th>国际 italki 总费</th></tr>
+  </thead>
+  <tbody>
+    <tr><td><strong>法语</strong></td><td>~525h</td><td>≈¥5.0万</td><td>≈¥11.3万</td><td>≈$15.2K</td></tr>
+    <tr><td><strong>德语</strong></td><td>~650h</td><td>≈¥5.5万</td><td>≈¥11.4万</td><td>≈$16.9K</td></tr>
+    <tr><td><strong>日语</strong></td><td>~700h</td><td>≈¥6.0万</td><td>≈¥11.6万</td><td>≈$17.5K</td></tr>
+    <tr><td><strong>俄语</strong></td><td>~850h</td><td>≈¥6.4万</td><td>≈¥29.8万</td><td>≈$15.3K</td></tr>
+    <tr><td><strong>西语</strong></td><td>~525h</td><td>≈¥4.5万</td><td>≈¥9.1万</td><td>≈$11.0K</td></tr>
+    <tr><td><strong>英语 (IELTS 6.5)</strong></td><td>~600h</td><td>≈¥5.7万</td><td>≈¥9.0万</td><td>≈$15.6K</td></tr>
+  </tbody>
+</table>
+    </div>
+  </details>
+
+  <details class="data-collapse">
+    <summary>📱 严肃学习+备考者实际 APP 安装数量 + 年花费（均值-Max）统计</summary>
+    <div class="collapse-body">
+      <table>
+        <thead>
+          <tr><th>语言 / 考试</th><th>大陆学生 APP 数</th><th>年花费 (CNY)</th><th>海外学生 APP 数</th><th>年花费 (USD)</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><strong>英语</strong> (IELTS/TOEFL)</td><td>3–6 个</td><td>¥65–350</td><td>4–6 个</td><td>$75–300</td></tr>
+          <tr><td><strong>法语</strong> (DELF/TCF)</td><td>4–6 个</td><td>¥135–450</td><td>4–6 个</td><td>$90–380</td></tr>
+          <tr><td><strong>日语</strong> (JLPT)</td><td>4–6 个</td><td>¥70–350</td><td>4–6 个</td><td>$50–400</td></tr>
+          <tr><td><strong>德语</strong> (Goethe/TestDaF)</td><td>4–6 个</td><td>¥155–580</td><td>4–6 个</td><td>$125–550</td></tr>
+          <tr><td><strong>俄语</strong> (TORFL)</td><td>3–5 个</td><td>¥160–450</td><td>3–5 个</td><td>$105–350</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+</div>
+</div>
+
+<!-- ============ SOLUTION 1: AI OPPORTUNITY ============ -->
+<div class="section section-white" id="ai-opportunity">
+<div class="container">
+  <p class="section-num">02 · 产品切入点</p>
+  <h2>考试训练模块拆解：哪些环节 AI 可以替代？</h2>
+  <p class="subtitle" style="line-height:1.7;">基于 DELF / 歌德 / TOPIK / IELTS 官方考纲权重与主流机构课程设置分析——<strong style="color:var(--red);">写作与口语是最大的效率瓶颈，也是 AI 替代价值最高的环节。</strong></p>
+
+  <table class="tm-table">
+    <thead>
+      <tr><th style="min-width:100px;">训练模块</th><th>考试权重</th><th>实际课堂占比</th><th>学生自练占比</th><th style="min-width:180px;">AI 可替代程度</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>✍️ 写作训练</td><td>20–25%</td><td>10–15%</td><td style="color:var(--red);font-weight:700;">5–10%</td>
+        <td><span class="ai-badge ai-extreme">🔴 极高</span> — 批改是核心瓶颈</td>
+      </tr>
+      <tr>
+        <td>🗣️ 口语训练</td><td>20–25%</td><td>15–20%</td><td style="color:var(--red);font-weight:700;">5%</td>
+        <td><span class="ai-badge ai-extreme">🔴 极高</span> — 需对练伙伴</td>
+      </tr>
+      <tr>
+        <td>👂 听力 / 听写</td><td>20–25%</td><td>15–20%</td><td>20–30%</td>
+        <td><span class="ai-badge ai-high">🟡 高</span> — 需结构化练习</td>
+      </tr>
+      <tr>
+        <td>📖 词汇 / 语法</td><td>20–25%</td><td>30–40%</td><td>40–50%</td>
+        <td><span class="ai-badge ai-high">🟡 中高</span> — 需智能复习</td>
+      </tr>
+      <tr>
+        <td>📄 阅读理解</td><td>15–25%</td><td>15–20%</td><td>20–30%</td>
+        <td><span class="ai-badge ai-medium">🟢 中</span> — 自学可完成</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="note-box" style="margin-top:24px;">
+    <strong>关键发现：</strong>写作（自练仅 5–10%）与口语（自练仅 5%）是学生自主训练比例最低的模块——不是学生不愿练，而是<strong style="color:var(--red);">没有工具可以练</strong>。这恰恰是 AI 替代价值最高、市场空白最大的两个环节，也是 LangHub 首先切入并已实现产品化的核心功能。
+  </div>
+</div>
+</div>
+/
+<!-- ============ SOLUTION 2: COST REVOLUTION (HERO) ============ -->
+<div class="section section-light" id="cost-hero">
+<div class="container">
+  <p class="section-num">03 · 核心优势 — 成本革命</p>
+  <h2>人工 vs. LangHub AI：单项成本对比</h2>
+  <p class="subtitle" style="line-height:1.7;">基于法语 B2 备考基准练习量估算，一个学生从零到考过 B2 的练习环节成本对比。</p>
+
+  <div class="hero-compare">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:8px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.15);">
+      <div style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;background:linear-gradient(90deg,#ff6b6b,#ff8e8e);border-radius:3px;display:inline-block;"></span><span style="font-size:.82rem;color:rgba(255,255,255,.7);">人工成本</span></div>
+      <div style="display:flex;align-items:center;gap:6px;"><span style="width:14px;height:14px;background:linear-gradient(90deg,#00c9a7,#4aedc4);border-radius:3px;display:inline-block;"></span><span style="font-size:.82rem;color:rgba(255,255,255,.7);">LangHub AI 成本</span></div>
+    </div>
+
+    <div class="compare-item">
+      <div class="compare-label">✍️ 一篇作文批改<br><span style="font-size:.75rem;color:rgba(255,255,255,.4);">~120篇 / 0→B2</span></div>
+      <div class="compare-bars">
+        <div class="cb-row"><span class="cb-tag">人工</span><div class="cb-bar human" style="width:100%;">¥37 – 85</div></div>
+        <div class="cb-row"><span class="cb-tag">AI</span><div class="cb-bar ai" style="width:2%;">¥0.05 – 0.33</div></div>
+      </div>
+      <div class="compare-drop"><div class="drop-num">112篇</div><div class="drop-text">最便宜人工=最贵AI模型批改数</div></div>
+      <div class="compare-save"><div class="save-num">¥6,400–7,040</div><div class="save-label">每位学生总节省</div></div>
+    </div>
+
+    <div class="compare-item">
+      <div class="compare-label">🗣️ 一次口语15min<br><span style="font-size:.75rem;color:rgba(255,255,255,.4);">~200次 / 0→B2</span></div>
+      <div class="compare-bars">
+        <div class="cb-row"><span class="cb-tag">人工</span><div class="cb-bar human" style="width:100%;">¥35 – 100</div></div>
+        <div class="cb-row"><span class="cb-tag">AI</span><div class="cb-bar ai" style="width:2%;">¥0.09 – 0.63</div></div>
+      </div>
+      <div class="compare-drop"><div class="drop-num">55.5分钟</div><div class="drop-text">最便宜人工=最贵AI模型总对话时长</div></div>
+      <div class="compare-save"><div class="save-num">¥8,800–9,680</div><div class="save-label">每位学生总节省</div></div>
+    </div>
+
+    <div class="compare-item">
+      <div class="compare-label">👂 一次听写+批改<br><span style="font-size:.75rem;color:rgba(255,255,255,.4);">~300词/50次 / 0→B2</span></div>
+      <div class="compare-bars">
+        <div class="cb-row"><span class="cb-tag">人工</span><div class="cb-bar human" style="width:100%;">¥18 – 65</div></div>
+        <div class="cb-row"><span class="cb-tag">AI</span><div class="cb-bar ai" style="width:2%;">¥0.02 – 0.3</div></div>
+      </div>
+      <div class="compare-drop"><div class="drop-num">18000字</div><div class="drop-text">最便宜人工=最贵AI模型听写总量</div></div>
+      <div class="compare-save"><div class="save-num">¥1,800–1,980</div><div class="save-label">每位学生总节省</div></div>
+    </div>
+
+    <div class="compare-item">
+      <div class="compare-label">📖 单词听写+语法学习<br><span style="font-size:.75rem;color:rgba(255,255,255,.4);">~400课时 / 0→B2</span></div>
+      <div class="compare-bars">
+        <div class="cb-row"><span class="cb-tag">人工</span><div class="cb-bar human" style="width:100%;">¥8 – 33</div></div>
+        <div class="cb-row"><span class="cb-tag">AI</span><div class="cb-bar ai" style="width:1%;">~¥0.001-0.05</div></div>
+      </div>
+      <div class="compare-drop"><div class="drop-num">↓ &gt;94-99%</div><div class="drop-text">边际成本趋零</div></div>
+      <div class="compare-save"><div class="save-num">¥3,000–3,300</div><div class="save-label">每位学生总节省</div></div>
+    </div>
+
+    <div class="compare-total-bar">
+      <div>
+        <div style="font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:4px;">整体成本降幅</div>
+        <div class="total-big">↓ 89% – 94%</div>
+      </div>
+      <div style="width:2px;height:50px;background:rgba(255,255,255,.2);"></div>
+      <div>
+        <div style="font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:4px;">每位学生 0→B2 练习总节省（基于1v1学习训练）</div>
+        <div class="total-mid" style="font-size:1.6rem;">¥20,000 – 22,000</div>
+      </div>
+      <div style="width:2px;height:50px;background:rgba(255,255,255,.2);"></div>
+      <div>
+        <div style="font-size:.85rem;color:rgba(255,255,255,.6);margin-bottom:4px;">AI 成本仅为人工的</div>
+        <div class="total-big">1 / 120</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid2" style="margin-top:24px;">
+    <div class="insight-box">
+      <h4>🗣️ 口语对练 = 最大省钱项</h4>
+      <p style="font-size:.9rem;line-height:1.7;">口语单次人工成本最高（¥50–170）、所需频次最多（~200次），占 0→B2 总节省的 <strong>约 50%</strong>。而在现实中口语恰恰是"学生自练占比"最低的模块（仅 5%）——因为 <strong style="color:var(--red);">没有AI之前根本找不到免费的对练伙伴</strong>。AI 不只是"降价"，而是开启了一个过去几乎不存在的练习场景。</p>
+    </div>
+    <div class="insight-box gold-box">
+      <h4>📈 语种越难、学时越长，AI 杠杆越大</h4>
+      <p style="font-size:.9rem;line-height:1.7;">日语/中文学生的 AI 练习节省可达 <strong style="color:var(--orange);">¥6.3万–22万</strong>，等价于 120–419 小时的 1v1 课程。对于这些需要 3–5 年才能达到 B2 的学习者，AI 将练习成本从不可承受变为近乎免费。</p>
+    </div>
+  </div>
+
+  <details class="data-collapse" style="margin-top:20px;">
+    <summary>🌍 各语种 AI 练习成本节省对比详情（点击展开）</summary>
+    <div class="collapse-body">
+<table>
+  <thead>
+    <tr>
+      <th>语种</th>
+      <th>难度</th>
+      <th>B2课时</th>
+      <th>节省比例</th>
+      <th>AI练习节省预估 (¥)</th>
+      <th>对比国内1v1总费 (¥)</th>
+      <th>节省等价1v1课时</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>法语</strong></td>
+      <td>Cat.2 中</td>
+      <td>525h</td>
+      <td>减少了18%</td>
+      <td>¥20,318</td>
+      <td>¥112,875</td>
+      <td>~95h</td>
+    </tr>
+    <tr>
+      <td><strong>西语</strong></td>
+      <td>Cat.1 易</td>
+      <td>525h</td>
+      <td>减少了21%</td>
+      <td>¥19,073</td>
+      <td>¥90,825</td>
+      <td>~110h</td>
+    </tr>
+    <tr>
+      <td><strong>英语</strong></td>
+      <td>—</td>
+      <td>600h</td>
+      <td>减少了13%</td>
+      <td>¥11,700</td>
+      <td>¥90,000</td>
+      <td>78h</td>
+    </tr>
+    <tr>
+      <td><strong>德语</strong></td>
+      <td>Cat.2 中</td>
+      <td>650h</td>
+      <td>减少了18%</td>
+      <td>¥20,475</td>
+      <td>¥113,750</td>
+      <td>~117h</td>
+    </tr>
+    <tr>
+      <td><strong>俄语</strong></td>
+      <td>Cat.3 难</td>
+      <td>850h</td>
+      <td>减少了25%</td>
+      <td>¥46,875</td>
+      <td>¥187,500</td>
+      <td>~213h</td>
+    </tr>
+    <tr>
+      <td><strong>日语</strong></td>
+      <td>Cat.2 中</td>
+      <td>700h</td>
+      <td>减少了11%</td>
+      <td>¥12,705</td>
+      <td>¥115,500</td>
+      <td>~126h</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+  </details>
+</div>
+</div>
+
+<!-- ============ LIFECYCLE: One Platform ============ -->
+<div class="section section-white" id="lifecycle">
+<div class="container">
+  <p class="section-num">04 · 一个平台，全流程覆盖</p>
+  <h2>语言学习全生命周期：从碎片化到一站式</h2>
+  <p class="subtitle" style="line-height:1.7;">每位严肃备考者的完整学习链路——传统方案需要 3–8 个 APP 拼凑，LangHub 一个平台全部覆盖。</p>
+
+  <div class="lifecycle-wrap">
+    <div class="lifecycle-flow">
+      <div class="lf-node">
+        <div class="lf-circle" style="background:var(--purple);">📖<br>单词</div>
+      </div>
+      <div class="lf-arrow"><i class="ri-arrow-right-line"></i></div>
+      <div class="lf-node">
+        <div class="lf-circle" style="background:#8b5cf6;">🔄<br>变位</div>
+      </div>
+      <div class="lf-arrow"><i class="ri-arrow-right-line"></i></div>
+      <div class="lf-node">
+        <div class="lf-circle" style="background:var(--blue);">👂<br>听写</div>
+      </div>
+      <div class="lf-arrow"><i class="ri-arrow-right-line"></i></div>
+      <div class="lf-node">
+        <div class="lf-circle" style="background:#0891b2;">📐<br>语法</div>
+      </div>
+      <div class="lf-arrow"><i class="ri-arrow-right-line"></i></div>
+      <div class="lf-node">
+        <div class="lf-circle" style="background:var(--orange);">🗣️<br>口语</div>
+      </div>
+      <div class="lf-arrow"><i class="ri-arrow-right-line"></i></div>
+      <div class="lf-node">
+        <div class="lf-circle" style="background:var(--red);">✍️<br>写作</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="langhub-bar">
+    <span class="big">LangHub = 一个平台，六大环节全覆盖 ✅</span>
+    替代 3–8 个 APP · 数据互通 · 学习进度连贯 · 费用降低 90%+
+  </div>
+
+  <h3 style="margin-top:36px;margin-bottom:8px;">各语种 × 各环节：传统方案需要哪些 APP？</h3>
+  <p style="font-size:.85rem;color:var(--sub);margin-bottom:16px;">下表展示每个环节学生实际需要安装的典型 APP 及年费——碎片化问题一目了然。</p>
+
+  <details class="data-collapse">
+    <summary>🇬🇧 英语 (IELTS/TOEFL) 全流程 APP 对标</summary>
+    <div class="collapse-body">
+      <table>
+        <thead><tr><th>LangHub 功能</th><th>大陆学生典型 APP</th><th>年费 (CNY)</th><th>海外学生典型 APP</th><th>年费 (USD)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>写作 AI 批改</strong></td><td>微软爱写作(免费) + 批改网 / 雅思哥</td><td>¥200–600</td><td>IELTS Writing Pro / Writing9</td><td>$60–300</td></tr>
+          <tr><td><strong>语法拼写检查</strong></td><td>Grammarly Pro</td><td>~¥144/年</td><td>Grammarly Pro</td><td>~$144/年</td></tr>
+          <tr><td><strong>口语 AI 对练</strong></td><td>多说Talkface / 雅思哥AI口语</td><td>¥298–598</td><td>Speak / ELSA Speak</td><td>$79–150</td></tr>
+          <tr><td><strong>听写练习</strong></td><td>每日英语听力 / 可可英语</td><td>¥98–198</td><td>Dictation.io + podcast</td><td>免费–$50</td></tr>
+          <tr><td><strong>单词训练</strong></td><td>墨墨背单词 / 不背单词</td><td>¥98–299</td><td>Anki + Quizlet</td><td>$36–48</td></tr>
+          <tr><td><strong>同义替换</strong></td><td>QuillBot 等</td><td>~¥100</td><td>QuillBot Premium</td><td>~$100</td></tr>
+          <tr><td><strong>AI Q&A</strong></td><td>ChatGPT Plus</td><td>~¥140/月</td><td>ChatGPT Plus</td><td>~$20/月</td></tr>
+          <tr class="total-row"><td colspan="2"><strong>合计约 5–8 个 APP</strong></td><td><strong>¥1,500–4,000+</strong></td><td></td><td><strong>$400–800+</strong></td></tr>
+        </tbody>
+      </table>
+      <div class="note-box" style="margin-top:12px;font-size:.82rem;">
+        📌 参考：Speak（AI口语对话APP）在2024年12月以<strong>10亿美元估值</strong>完成 $78M C轮融资——仅覆盖口语一个环节。
+      </div>
+    </div>
+  </details>
+
+  <details class="data-collapse">
+    <summary>🇫🇷 法语 (DELF/TCF) 全流程 APP 对标</summary>
+    <div class="collapse-body">
+      <table>
+        <thead><tr><th>功能</th><th>典型 APP</th><th>年费</th></tr></thead>
+        <tbody>
+          <tr><td><strong>综合学习</strong></td><td>Busuu / Babbel</td><td>~$84–120/年</td></tr>
+          <tr><td><strong>考试备考</strong></td><td>PrepMyFuture</td><td>~$39–49/次</td></tr>
+          <tr><td><strong>写作批改</strong></td><td><span style="color:var(--red);font-weight:700;">❌ 几乎无专门工具</span>，依赖人工</td><td>$25–50/篇</td></tr>
+          <tr><td><strong>口语练习</strong></td><td>italki（真人外教）</td><td>~$15–30/小时</td></tr>
+          <tr><td><strong>单词 / 语法</strong></td><td>Duolingo + Anki</td><td>$84/年</td></tr>
+          <tr><td><strong>动词变位</strong></td><td>Conjugaison / lingvist</td><td>$120/年</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+  <details class="data-collapse">
+    <summary>🇩🇪 德语 (Goethe/TestDaF) 全流程 APP 对标</summary>
+    <div class="collapse-body">
+      <table>
+        <thead><tr><th>LangHub 功能</th><th>大陆学生典型 APP</th><th>年费 (CNY)</th><th>海外学生典型 APP</th><th>年费 (USD)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>写作 AI 批改</strong></td><td><span style="color:var(--red);">❌ 无专门工具</span>，依赖课程/ChatGPT</td><td>¥2,000–8,000 或 ChatGPT ¥1,680/年</td><td>PrepDaF / DeutschExam.ai</td><td>~$10–20/月</td></tr>
+          <tr><td><strong>语法拼写检查</strong></td><td>德语助手</td><td>基础免费；高级 ~¥98/年</td><td>LanguageTool / Duden Mentor</td><td>~$60/年</td></tr>
+          <tr><td><strong>口语 AI 对练</strong></td><td><span style="color:var(--red);">❌ 无AI口语工具</span>，iTalki</td><td>¥80–200/小时</td><td>PrepDaF / Seedlang</td><td>~$108/年</td></tr>
+          <tr><td><strong>听写练习</strong></td><td>⚠️无用户自学听写，每日德语听力</td><td>~¥98/年(VIP)</td><td>DW / Seedlang</td><td>免费–$108/年</td></tr>
+          <tr><td><strong>单词训练</strong></td><td>德语助手背单词</td><td>¥98/年</td><td>Babbel / Anki + Drops</td><td>~$101+$60/年</td></tr>
+          <tr><td><strong>动词变位</strong></td><td>⚠️无用户练习，德语助手（变位反查）</td><td>含在 ¥98 内</td><td>Seedlang / Conjugation.com</td><td>~$108/年</td></tr>
+          <tr><td><strong>同义替换</strong></td><td><span style="color:var(--red);">❌ 无专门工具</span>，靠 DeepL</td><td>DeepL Pro ~¥600/年</td><td><span style="color:var(--red);">❌ 无工具</span>，Reverso</td><td>~$60/年</td></tr>
+          <tr><td><strong>AI Q&A</strong></td><td>ChatGPT Plus</td><td>~¥1,680/年</td><td>ChatGPT Plus</td><td>~$240/年</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+  <details class="data-collapse">
+    <summary>🇷🇺 俄语 (TORFL/ТРКИ) 全流程 APP 对标</summary>
+    <div class="collapse-body">
+      <table>
+        <thead><tr><th>LangHub 功能</th><th>大陆学生典型 APP</th><th>年费 (CNY)</th><th>海外学生典型 APP</th><th>年费 (USD)</th></tr></thead>
+        <tbody>
+          <tr><td><strong>写作 AI 批改</strong></td><td><span style="color:var(--red);">❌ 几乎无工具</span>，依赖真人老师/ChatGPT</td><td>ChatGPT ~¥1,680/年 或课程内含</td><td><span style="color:var(--red);">❌ 无工具</span>，iTalki/LingQ</td><td>$5–10/篇；LingQ ~$156/年</td></tr>
+          <tr><td><strong>语法拼写检查</strong></td><td>千亿词霸 / 沙拉俄语</td><td>免费–¥30</td><td>LanguageTool</td><td>免费基础；Premium ~$60/年</td></tr>
+          <tr><td><strong>口语 AI 对练</strong></td><td><span style="color:var(--red);">❌ 无AI口语工具</span>，HelloTalk</td><td>HelloTalk VIP ~¥148/年</td><td>Pimsleur / Rocket Russian</td><td>$150–240/年</td></tr>
+          <tr><td><strong>听写练习</strong></td><td>俄语俄国圈 / Слушай</td><td>免费–¥50</td><td>RussianPod101</td><td>$48–276/年</td></tr>
+          <tr><td><strong>单词训练</strong></td><td>莱特俄语背单词 / 沙拉俄语</td><td>¥98–298/年</td><td>Anki + Memrise</td><td>$25+$60/年</td></tr>
+          <tr><td><strong>变位 / 变格</strong></td><td><span style="color:var(--red);">❌ 无专门工具</span>，千亿词霸手查</td><td>免费</td><td>Russian Cases App + Wiktionary</td><td>免费–$5</td></tr>
+          <tr><td><strong>同义替换</strong></td><td><span style="color:var(--red);">❌ 完全无工具</span></td><td>N/A</td><td><span style="color:var(--red);">❌ 完全无工具</span></td><td>N/A</td></tr>
+          <tr><td><strong>AI Q&A</strong></td><td>ChatGPT Plus / 豆包</td><td>ChatGPT ~¥1,680/年</td><td>ChatGPT Plus</td><td>~$240/年</td></tr>
+        </tbody>
+      </table>
+      <div class="warn-box" style="margin-top:12px;font-size:.85rem;">
+        ⚠️ 俄语赛道尤为突出：写作批改、口语AI对练、变位练习、同义替换 <strong>四项功能在全球范围内几乎完全空白</strong>——LangHub 是唯一提供完整覆盖的产品。
+      </div>
+    </div>
+  </details>
+
+</div>
+</div>
+
+<!-- ============ MISSION SUMMARY ============ -->
+<div class="section section-gradient" id="summary" style="text-align:center;">
+<div class="container">
+  <p class="section-num" style="color:var(--gold);">MISSION</p>
+  <h2 style="font-size:1.8rem;color:#fff;margin-bottom:8px;">一句话总结 LangHub 的使命</h2>
+  <div class="divider" style="margin:16px auto;background:var(--gold);"></div>
+
+  <div class="mission-banner" style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.15);margin-top:24px;">
+    <p class="mission-text">
+      一个语言学习备考学生从零到考过 B2，在新东方或其他机构身上需要花
+    </p>
+    <span class="mission-highlight" style="color:var(--red);">¥2.5 万 – 13 万</span>
+    <p class="mission-text">
+      其中约 <strong style="color:var(--gold);font-size:1.3rem;">45%–60%</strong> 的费用花在了作文批改、口语陪练、听写与词汇练习上<br>——这部分 AI 的成本是人工的
+    </p>
+    <span class="mission-highlight">1 / 120</span>
+    <p class="mission-text mission-sub" style="font-size:1.2rem;margin-top:20px;">
+      LangHub 的使命，就是用一个软件<br>把这 45%–60% 的成本从学生账单上<strong>划掉</strong>。
+    </p>
+  </div>
+
+  <div class="stat-row" style="margin-top:36px;">
+    <div class="stat-item">
+      <span class="si-num">7</span>
+      <span class="si-label">核心功能模块</span>
+    </div>
+    <div class="stat-item">
+      <span class="si-num">6+</span>
+      <span class="si-label">覆盖语种</span>
+    </div>
+    <div class="stat-item">
+      <span class="si-num" style="color:var(--gold);">↓ 89%</span>
+      <span class="si-label">练习成本降幅</span>
+    </div>
+    <div class="stat-item">
+      <span class="si-num">1</span>
+      <span class="si-label">个 APP 全覆盖</span>
+    </div>
+    <div class="stat-item">
+      <span class="si-num" style="color:var(--red);">0</span>
+      <span class="si-label">完整功能竞品</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 为什么是现在？ ============ -->
+<div class="section section-dark">
+<div class="container">
+  <h2 style="text-align:center;margin-bottom:8px;">为什么是现在？</h2>
+  <p style="text-align:center;color:rgba(255,255,255,.6);margin-bottom:36px;">四大不可逆趋势在2026年交汇，创造前所未有的窗口期</p>
+  <div class="grid2">
+    <div class="card card-dark">
+      <h3><i class="ri-brain-line icon-flat" style="color:var(--accent);"></i> AI能力飞跃式提升</h3>
+      <p style="color:rgba(255,255,255,.7);">GPT-5/Claude 4 写作批改质量达专业教师水平 · DeepSeek-R1推理能力突破+多模态语音识别成熟 · 每次批改成本仅¥0.08</p>
+    </div>
+    <div class="card card-dark">
+      <h3><i class="ri-coin-line icon-flat" style="color:var(--blue);"></i> 成本崩塌+竞争窗口</h3>
+      <p style="color:rgba(255,255,255,.7);">DeepSeek API比GPT-5便宜90-95%，每篇批改¥0.08 · 国产开源模型降低技术门槛 · 小团队可构建大模型级体验</p>
+    </div>
+    <div class="card card-dark">
+      <h3><i class="ri-earth-line icon-flat" style="color:var(--purple);"></i> 竞争真空+结构性转移</h3>
+      <p style="color:rgba(255,255,255,.7);">非英语AI考试备考全球空白 · 500K DELF考生零AI工具 · 双减压缩K-9空间，成人教育获政策鼓励 · 线上学习习惯固化</p>
+    </div>
+    <div class="card card-dark">
+      <h3><i class="ri-star-line icon-flat" style="color:var(--gold);"></i> 验证信号密集</h3>
+      <p style="color:rgba(255,255,255,.7);">Speak 12月达$10亿估值 · LexiBot 2年0→35万用户 · 半年AI语言融资$1.6亿 · 2026=中国AI+教育商业化元年</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 创始人优势 ============ -->
+<div class="section section-gradient">
+<div class="container">
+  <p class="section-num" style="text-align:center;">FOUNDER EDGE</p>
+  <h2 style="text-align:center;margin-bottom:8px;">为什么我能做这个项目？</h2>
+  <p style="text-align:center;color:rgba(255,255,255,.6);margin-bottom:36px;">
+    技术深度 × 多语言实战 × 跨领域学习力 × AI 极速执行 —— 四维交叉的稀缺创始人画像
+  </p>
+
+  <!-- 关键数字一览 -->
+  <div class="stat-row">
+    <div class="stat-item">
+      <span class="si-num">UBC</span>
+      <span class="si-label">计算机 + 统计 综合专业</span>
+    </div>
+    <div class="stat-item">
+      <span class="si-num" style="color:var(--purple);">3 语言</span>
+      <span class="si-label">英 · 法 · 日 标化考试实战</span>
+    </div>
+    <div class="stat-item">
+      <span class="si-num" style="color:var(--gold);">多家头部公司</span>
+      <span class="si-label">核心部门 软件工程师</span>
+    </div>
+    <div class="stat-item">
+      <span class="si-num" style="color:var(--red);">2.5 月</span>
+      <span class="si-label">独立完成全栈 MVP</span>
+    </div>
+  </div>
+
+  <!-- 四维能力卡片 -->
+  <div class="grid2" style="margin-top:30px;">
+
+    <!-- 技术硬实力 -->
+    <div class="card card-dark" style="border-top:4px solid var(--accent);">
+      <h3><i class="ri-code-s-slash-line icon-flat" style="color:var(--accent);"></i> 技术硬实力</h3>
+      <p style="color:rgba(255,255,255,.7);margin-bottom:14px;">
+        UBC 计算机 + 统计综合专业毕业<br>
+        多门高年级 CS 课程 <strong style="color:var(--accent);">A ~ A+</strong><br>
+        被教授聘任为高年级 CS 课程助教（TA）<strong style="color:var(--accent);">1 年</strong>
+      </p>
+      <div style="border-top:1px solid rgba(255,255,255,.12);padding-top:12px;">
+        <p style="color:rgba(255,255,255,.45);font-size:.78rem;margin-bottom:4px;">工业经验</p>
+        <p style="color:rgba(255,255,255,.9);font-weight:700;">
+          多家知名公司 · 核心部门 软件工程师
+        </p>
+      </div>
+    </div>
+
+    <!-- 多语言实战 -->
+    <div class="card card-dark" style="border-top:4px solid var(--purple);">
+      <h3><i class="ri-translate-2 icon-flat" style="color:var(--purple);"></i> 多语言考试高分选手· 教学经验</h3>
+      <p style="color:rgba(255,255,255,.7);margin-bottom:16px;">
+        亲历多语种标化考试备考全流程，具备丰富高分备考经验<br>
+        深刻理解备考者真实痛点 → 产品需求源于一手经验+其他用户追踪交流
+        曾担任青岛朗阁雅思兼职1对1讲师
+        纯英文辅助高级软件工程开发课程教学
+      </p>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <span class="tag" style="font-size:.9rem;padding:6px 16px;">🇬🇧 雅思 8.0</span>
+        <span class="tag tag-purple" style="font-size:.9rem;padding:6px 16px;">🇫🇷 法语 TCF B2+</span>
+        <span class="tag tag-red" style="font-size:.9rem;padding:6px 16px;">🇯🇵 日语 JLPT N3</span>
+      </div>
+    </div>
+
+    <!-- Vibe Coding 极速执行 -->
+    <div class="card card-dark" style="border-top:4px solid var(--gold);">
+      <h3><i class="ri-rocket-line icon-flat" style="color:var(--gold);"></i> AI Vibe Coding · 极速执行</h3>
+      <p style="color:rgba(255,255,255,.7);margin-bottom:12px;">
+        熟练运用 AI 辅助编程，独立完成高复杂度全栈项目
+      </p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin:12px 0;">
+        <div style="text-align:center;flex:1;min-width:90px;background:rgba(255,215,0,.08);border-radius:12px;padding:12px 8px;">
+          <span style="font-size:1.6rem;font-weight:900;color:var(--gold);display:block;">200+</span>
+          <span style="font-size:.75rem;color:rgba(255,255,255,.5);">项目文件数</span>
+        </div>
+        <div style="text-align:center;flex:1;min-width:90px;background:rgba(255,215,0,.08);border-radius:12px;padding:12px 8px;">
+          <span style="font-size:1.6rem;font-weight:900;color:var(--gold);display:block;">80 万</span>
+          <span style="font-size:.75rem;color:rgba(255,255,255,.5);">Token 代码总量</span>
+        </div>
+        <div style="text-align:center;flex:1;min-width:90px;background:rgba(255,215,0,.08);border-radius:12px;padding:12px 8px;">
+          <span style="font-size:1.6rem;font-weight:900;color:var(--gold);display:block;">2.5 月</span>
+          <span style="font-size:.75rem;color:rgba(255,255,255,.5);">兼职 + 全职开发</span>
+        </div>
+      </div>
+      <p style="color:rgba(255,255,255,.5);font-size:.82rem;">
+        → 早期零额外人力成本 · 一人即一个小型全栈团队
+      </p>
+    </div>
+
+    <!-- 跨领域学习力 -->
+    <div class="card card-dark" style="border-top:4px solid var(--red);">
+      <h3><i class="ri-award-line icon-flat" style="color:var(--red);"></i> 跨领域学习力验证</h3>
+      <p style="color:rgba(255,255,255,.65);margin-bottom:14px;font-size:.88rem;">
+        持续突破陌生领域，验证快速学习+高效输出的底层能力
+      </p>
+      <div style="border-left:3px solid var(--gold);padding-left:14px;margin:12px 0;">
+        <p style="color:var(--gold);font-weight:700;font-size:.95rem;">🏛️ 中国司法考试 · 高分通过</p>
+        <p style="color:rgba(255,255,255,.5);font-size:.82rem;">公认"天下第一考" · 通过率仅 8~12% · 零法律基础跨领域突破</p>
+      </div>
+      <div style="border-left:3px solid var(--accent);padding-left:14px;margin:12px 0;">
+        <p style="color:var(--accent);font-weight:700;font-size:.95rem;">🎓 UBC 高年级 CS 课程 TA</p>
+        <p style="color:rgba(255,255,255,.5);font-size:.82rem;">本科期间被教授选聘 · 技术能力获学术体系认可</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 底部核心论点 -->
+  <div style="margin-top:32px;padding:28px 32px;background:rgba(0,201,167,.1);border:1px solid rgba(0,201,167,.25);border-radius:16px;text-align:center;">
+    <p style="font-size:1.15rem;color:#fff;line-height:1.9;">
+      <i class="ri-focus-3-line" style="color:var(--accent);font-size:1.3rem;vertical-align:-0.15em;margin-right:6px;"></i>
+      <strong style="color:var(--accent);">创始人 =  + 技术构建者</strong><br>
+      <span style="color:rgba(255,255,255,.7);font-size:.95rem;">
+        同时具备「多语种考试深度体验者+经验丰富指导者」与「全栈工程 + AI 协同开发者」双重身份 ——<br>
+        精准定义用户痛点，并独立快速交付产品。在 AI + 语言教育赛道，交叉背景稀缺且精准契合。
+      </span>
+    </p>
+  </div>
+
+</div>
+</div>
+
+<!-- ============ 产品 ============ -->
+<div class="section section-white">
+<div class="container">
+  <h2 style="text-align:center;">产品：AI 全栈语言考试备考平台</h2>
+  <p class="subtitle" style="text-align:center;">法语/日语/德语/俄语考试备考 + 有工作生活语言需求的严肃学习者</p>
+  <div class="grid3">
+    <div class="card" style="border-top:4px solid var(--accent);">
+      <h3><i class="ri-edit-line icon-flat accent"></i> 写作 AI 批改</h3>
+      <p>原版批改 + 校订版 + AI范文 · 考试评分标准对齐</p>
+      <p style="margin-top:8px;font-weight:700;">国内 ¥0.08/篇 vs 人类 ¥180<br>海外 $0.35/篇 vs 人类 $50</p>
+    </div>
+    <div class="card" style="border-top:4px solid var(--purple);">
+      <h3><i class="ri-mic-line icon-flat purple"></i> 口语 AI 对练</h3>
+      <p>日常训练/模拟考官对话 · 实时纠音+流利度评分 · 练后详细报告</p>
+      <p style="margin-top:8px;font-weight:700;">AI定制化Persona · 模拟真实考试评估</p>
+    </div>
+    <div class="card" style="border-top:4px solid var(--gold);">
+      <h3><i class="ri-headphone-line icon-flat gold"></i> 听写训练</h3>
+      <p>上传音频/库中选取逐句拆解 · 上传文本TTS转语音后逐句练习</p>
+      <p style="margin-top:8px;"><strong class="red">全球唯一AI结构化听写工具</strong></p>
+    </div>
+    <div class="card" style="border-top:4px solid var(--orange);">
+      <h3><i class="ri-book-open-line icon-flat" style="color:var(--orange);"></i> 自研词条系统</h3>
+      <p>口语/写作考试针对性场景例句 · 动词固定搭配+特殊用法 · 官方/自建词库</p>
+      <p style="margin-top:8px;font-weight:700;">自定义词条验证成本: ¥0.0002/词</p>
+    </div>
+    <div class="card" style="border-top:4px solid var(--red);">
+      <h3><i class="ri-text icon-flat red"></i> 动词变位训练</h3>
+      <p>拉丁语系专属设计 · 系统化变位练习 · AI定制化训练集/错词本</p>
+      <p style="margin-top:8px;"><strong class="red">国内市场空白</strong> · 国际对标Lingvist $120/年</p>
+    </div>
+    <div class="card" style="border-top:4px solid var(--blue);">
+      <h3><i class="ri-robot-line icon-flat" style="color:var(--blue);"></i> AI 智能导师</h3>
+      <p>基于错误记录定制 · 跨技能弱点追踪 · 系统化学习建议/富文本课程笔记</p>
+      <p style="margin-top:8px;font-weight:700;">可互动+可视化 · 全技能闭环反馈</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 全球竞争格局 ============ -->
+<div class="section section-light">
+<div class="container">
+  <h2>全球竞争格局：无全栈竞品</h2>
+  <p class="subtitle">唯一同时覆盖 写作+口语+听写+词汇+变位+考试对齐+AI导师 的全栈平台 · 最接近竞品仅覆盖1-2项功能</p>
+  <div style="overflow-x:auto;">
+  <table style="font-size:.82rem;">
+    <thead>
+      <tr><th>竞品</th><th>写作</th><th>口语</th><th>听写</th><th>词汇</th><th>变位</th><th>考试对齐</th><th>语种</th><th>估值</th><th>融资</th></tr>
+    </thead>
+    <tbody>
+      <tr style="background:rgba(0,201,167,.1);"><td><strong style="color:var(--accent);">LangPrepHub</strong></td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-green">✅</span></td><td>多语种</td><td>早期</td><td>—</td></tr>
+      <tr><td>SavoirX</td><td><span class="badge badge-green">✅</span></td><td>—</td><td>—</td><td>—</td><td>—</td><td><span class="badge badge-green">✅</span></td><td>仅法语</td><td>未披露</td><td>未披露</td></tr>
+      <tr><td>Speak</td><td>—</td><td><span class="badge badge-green">✅</span></td><td>—</td><td>—</td><td>—</td><td>—</td><td>主要英语</td><td>~$10亿</td><td>$162M</td></tr>
+      <tr><td>Praktika AI</td><td>—</td><td><span class="badge badge-green">✅</span></td><td>—</td><td><span class="badge badge-green">✅</span></td><td>—</td><td>—</td><td>9语种</td><td>未公开</td><td>$38M</td></tr>
+      <tr><td>LanguageTool</td><td><span class="badge badge-yellow">⚠️</span></td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>30+语种</td><td>未公开</td><td>未披露</td></tr>
+      <tr><td>Grammarly</td><td><span class="badge badge-yellow">⚠️</span></td><td>—</td><td>—</td><td>—</td><td>—</td><td>—</td><td>beta</td><td>~$130亿</td><td>$400M</td></tr>
+      <tr><td>Duolingo Max</td><td>—</td><td><span class="badge badge-yellow">⚠️</span></td><td><span class="badge badge-yellow">⚠️</span></td><td><span class="badge badge-green">✅</span></td><td>—</td><td>—</td><td>~8语种</td><td>~$42亿</td><td>$183M</td></tr>
+      <tr><td>批改网 Pigai</td><td><span class="badge badge-green">✅</span></td><td>—</td><td>—</td><td>—</td><td>—</td><td><span class="badge badge-yellow">⚠️</span></td><td>仅英语</td><td>小型</td><td>数千万RMB</td></tr>
+      <tr><td>百词斩</td><td>—</td><td>—</td><td>—</td><td><span class="badge badge-green">✅</span></td><td>—</td><td>—</td><td>仅英语</td><td>未公开</td><td>未披露</td></tr>
+      <tr><td>ChatGPT/Claude</td><td><span class="badge badge-yellow">⚠️</span></td><td><span class="badge badge-yellow">⚠️</span></td><td>—</td><td>—</td><td>—</td><td>—</td><td>全语种</td><td>N/A</td><td>N/A</td></tr>
+      <tr><td>ConjuGato</td><td>—</td><td>—</td><td>—</td><td>—</td><td><span class="badge badge-green">✅</span></td><td>—</td><td>独立工具</td><td>微型</td><td>自筹</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="grid2" style="margin-top:20px;">
+    <div class="note-box"><strong><i class="ri-key-line icon-flat"></i> 关键发现：</strong>变位训练=全球竞品空白 · Speak单凭口语做到$10亿 → 全栈产品理论天花板更高 · 批改网11年仅A轮 → 纯B2B+单语种+传统NLP增长停滞</div>
+    <div class="note-box" style="border-left-color:var(--purple);"><strong><i class="ri-lightbulb-line icon-flat"></i> 战略启示：</strong>变位+考试对齐+多语种=三重"无人区"壁垒 · 避免批改网纯B2B路径，C端优先 · 口语模块对标Praktika交互体验</div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 中国竞品 ============ -->
+<div class="section section-white">
+<div class="container">
+  <h2>中国市场 — 无竞品，且英语产品对比海外存在劣势</h2>
+  <div style="overflow-x:auto;">
+  <table style="font-size:.85rem;">
+    <thead><tr><th>中国竞品</th><th>MAU</th><th>语种</th><th>AI辅助</th><th>写作</th><th>听写</th><th>变位</th><th>口语</th><th>考试对齐</th></tr></thead>
+    <tbody>
+      <tr><td>百词斩</td><td>16-20M</td><td>仅英语</td><td><span class="badge badge-yellow">⚠️</span></td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td><span class="badge badge-yellow">⚠️</span></td></tr>
+      <tr><td>墨墨背单词</td><td>#2</td><td>仅英语</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td></tr>
+      <tr><td>流利说 (已退市)</td><td>曾201M</td><td>仅英语</td><td><span class="badge badge-yellow">⚠️</span></td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td></tr>
+      <tr><td>网易有道</td><td>—</td><td>多语种</td><td><span class="badge badge-yellow">⚠️</span></td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td></tr>
+      <tr><td>XX助手</td><td>—</td><td>多语种</td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-yellow">⚠️</span></td><td>❌</td><td>❌</td><td><span class="badge badge-yellow">⚠️</span></td><td><span class="badge badge-yellow">⚠️</span></td></tr>
+      <tr><td>新东方/欧亚教育</td><td>—</td><td>多语种</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td><td>❌</td></tr>
+      <tr><td>Duolingo (中国版)</td><td>受限</td><td>多语种</td><td><span class="badge badge-green">✅</span></td><td>❌</td><td><span class="badge badge-yellow">⚠️</span></td><td>❌</td><td><span class="badge badge-yellow">⚠️</span></td><td>❌</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="warn-box" style="margin-top:20px;text-align:center;">
+    <strong style="font-size:1.1rem;">关键中国市场空白：</strong><br>
+    非英语AI写作批改 — 1-2款基础功能 · DELF/TOPIK/歌德AI备考 — <strong class="red">零产品</strong> · 动词变位AI — <strong class="red">零</strong> · 全栈平台 — <strong class="red">不存在</strong>
+  </div>
+</div>
+</div>
+
+<!-- ============ A.1 全球认真语言学习者 ============ -->
+<div class="section section-light">
+<div class="container">
+  <div class="section-title-bar">
+    <i class="ri-global-line"></i>
+    <h2 style="color:#fff;">A.1 全球认真语言学习者（含备考者+工作生活需求）</h2>
+  </div>
+  <p class="subtitle">「认真学习者」= 报课程、买教材、持续学习人群，不含仅使用APP偶尔学习的兴趣用户</p>
+
+  <div class="grid3" style="margin-bottom:24px;">
+    <div class="card" style="text-align:center;border-top:4px solid var(--accent);">
+      <div class="stat">~4.3亿/年</div>
+      <p style="font-weight:600;">全球认真学习者总量</p>
+      <p style="font-size:.8rem;color:var(--sub);">含英语学习者~3.5亿</p>
+    </div>
+    <div class="card" style="text-align:center;border-top:4px solid var(--purple);">
+      <div class="stat-purple" style="font-size:2.2rem;font-weight:800;">~8,275万/年</div>
+      <p style="font-weight:600;">非英语认真学习者</p>
+      <p style="font-size:.8rem;color:var(--sub);">LangPrepHub核心目标人群</p>
+    </div>
+    <div class="card" style="text-align:center;border-top:4px solid var(--orange);">
+      <div style="font-size:2.2rem;font-weight:800;color:var(--orange);">3,726万+/年</div>
+      <p style="font-weight:600;">年度考试考生</p>
+      <p style="font-size:.8rem;color:var(--sub);">高付费意愿子集</p>
+    </div>
+  </div>
+
+  <div style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr><th>语种</th><th>全球学习者总量</th><th>认真学习者</th><th>年度考试考生</th><th>数据来源</th></tr>
+    </thead>
+    <tbody>
+      <tr class="highlight-row"><td>🇬🇧 英语</td><td>~15亿</td><td><strong>~3-4亿</strong></td><td>~2,700万+</td><td>British Council</td></tr>
+      <tr><td>🇯🇵 日语</td><td>~380万 (正式)</td><td><strong>~150-200万</strong></td><td>~232万</td><td>Japan Foundation 2021</td></tr>
+      <tr><td>🇫🇷 法语</td><td>~1.7亿使用者</td><td><strong>~5,000万</strong></td><td>~89万</td><td>OIF 2026</td></tr>
+      <tr><td>🇩🇪 德语</td><td>1,540万</td><td><strong>~800万</strong></td><td>~157万</td><td>联邦外交部</td></tr>
+      <tr><td>🇰🇷 韩语</td><td>~1,600万 🔶</td><td><strong>~400万 🔶</strong></td><td>~55万</td><td>King Sejong 🔶</td></tr>
+      <tr><td>🇷🇺 俄语</td><td>~1,000万 🔶</td><td><strong>~300万 🔶</strong></td><td>~8-10万</td><td>🔶 估算</td></tr>
+      <tr><td>🇪🇸 西班牙语</td><td>~2,200万</td><td><strong>~1,000万</strong></td><td>~22万</td><td>Cervantes 2024</td></tr>
+      <tr><td>🇨🇳 中文</td><td>~2,500万 🔶</td><td><strong>~600万 🔶</strong></td><td>~84万</td><td>CLEC 🔶</td></tr>
+      <tr class="total-row">
+        <td><strong>合计</strong></td>
+        <td>—</td>
+        <td><strong>~4.3亿</strong><br><span style="font-size:.75rem;color:var(--purple);">非英语: ~8,275万</span></td>
+        <td><strong>~3,347万+</strong></td>
+        <td>—</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="grid2" style="margin-top:24px;">
+    <div class="note-box">
+      <strong><i class="ri-pushpin-line icon-flat"></i> 非英语市场 = LangPrepHub差异化核心</strong><br>
+      法语5,000万 + 西语1,000万 + 德语800万 + 中文600万 + 韩语400万 + 俄语300万 + 日语175万 = <strong>8,275万</strong>认真学习者，年度考试考生约683万，目前AI备考工具近乎为零。<br><br>
+      <strong class="red">特别是高考小语种人数近10年呈爆炸式增长（日语10年增长57倍），但被统一划为国内高考人群，人群和实际学习需求被长期忽视。</strong>
+    </div>
+    <div class="warn-box">
+      <strong><i class="ri-error-warning-line icon-flat"></i> 英语市场：大但竞争激烈</strong><br>
+      英语认真学习者3-4亿，但已有Grammarly($130亿)、Speak($10亿)、ELSA、批改网等成熟产品。LangPrepHub的英语模块作为流量入口和收入补充，非主要差异化方向。
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============ A.2 全球标准化语言考试年度考生 ============ -->
+<div class="section section-white">
+<div class="container">
+  <div class="section-title-bar">
+    <i class="ri-bar-chart-grouped-line"></i>
+    <h2 style="color:#fff;">A.2 全球标准化语言考试年度考生（基于2023-2025可靠数据）</h2>
+  </div>
+  <p class="subtitle">数据覆盖英语、日语、法语、德语、韩语、俄语、西班牙语七大语种 + 中文HSK · 来源：各考试官方机构报告、教育部统计及行业研究</p>
+
+  <div class="grid4" style="margin-bottom:24px;">
+    <div class="card" style="text-align:center;border-top:4px solid var(--accent);">
+      <div class="stat">3,726万+/年</div>
+      <p style="font-weight:600;">全球年度考生总量</p>
+    </div>
+    <div class="card" style="text-align:center;border-top:4px solid var(--purple);">
+      <div class="stat-purple" style="font-size:2.2rem;font-weight:800;">3,043万/年</div>
+      <p style="font-weight:600;">英语考试考生</p>
+    </div>
+    <div class="card" style="text-align:center;border-top:4px solid var(--orange);">
+      <div style="font-size:2.2rem;font-weight:800;color:var(--orange);">683万+/年</div>
+      <p style="font-weight:600;">非英语考试考生</p>
+      <p style="font-size:.8rem;color:var(--sub);">核心蓝海市场</p>
+    </div>
+    <div class="card" style="text-align:center;border-top:4px solid var(--red);">
+      <div class="stat-red" style="font-size:2.2rem;font-weight:800;">~3,400万/年</div>
+      <p style="font-weight:600;">含写作口语模块考试考生</p>
+      <p style="font-size:.8rem;color:var(--sub);">LangPrepHub核心TAM</p>
+    </div>
+  </div>
+
+  <div style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr><th>语种</th><th>考试名称</th><th>年度考生</th><th>写作</th><th>口语</th><th>数据来源/年份</th></tr>
+    </thead>
+    <tbody>
+      <tr class="lang-header"><td colspan="6">🇬🇧 英语 — 小计：~3,043万</td></tr>
+      <tr><td></td><td>IELTS</td><td><strong>400万</strong></td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-green">✅</span></td><td>IELTS.org 2023</td></tr>
+      <tr><td></td><td>TOEFL</td><td>~100万</td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-green">✅</span></td><td>ETS CEO声明</td></tr>
+      <tr><td></td><td>PTE Academic</td><td>123万</td><td><span class="badge badge-red">❌</span></td><td><span class="badge badge-green">✅</span></td><td>Pearson财报 2023</td></tr>
+      <tr class="highlight-row"><td></td><td>CET-4/6 (中国)</td><td><strong>~1,800万</strong></td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-red">❌</span></td><td>中国教育部 🔶</td></tr>
+      <tr><td></td><td>Duolingo ET</td><td>~70万</td><td><span class="badge badge-red">❌</span></td><td><span class="badge badge-red">❌</span></td><td>SEC推算 2024</td></tr>
+      <tr><td></td><td>Cambridge (FCE等)</td><td><strong>~550万</strong></td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-green">✅</span></td><td>Cambridge官方 2023</td></tr>
+
+      <tr class="lang-header"><td colspan="6">🇯🇵 日语 — 小计：~232万</td></tr>
+      <tr><td></td><td>JLPT</td><td><strong>147万</strong></td><td><span class="badge badge-red">❌ 无</span></td><td><span class="badge badge-red">❌ 无</span></td><td>jlpt.jp 2024</td></tr>
+      <tr class="highlight-row"><td></td><td>高考日语 (中国)</td><td><strong>55万</strong></td><td><span class="badge badge-green">✅ 30分</span></td><td><span class="badge badge-red">❌</span></td><td>2025年 多来源</td></tr>
+      <tr><td></td><td>EJU</td><td>~8万</td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-red">❌</span></td><td>🔶 估算</td></tr>
+      <tr><td></td><td>J-TEST / NAT-TEST</td><td>~22万</td><td><span class="badge badge-yellow">⚠️ 部分</span></td><td><span class="badge badge-red">❌</span></td><td>官网 🔶</td></tr>
+
+      <tr class="lang-header"><td colspan="6">🇫🇷 法语 — 小计：~89万</td></tr>
+      <tr><td></td><td>DELF/DALF</td><td><strong>498,463</strong></td><td><span class="badge badge-green">✅ 25%</span></td><td><span class="badge badge-green">✅ 25%</span></td><td>FEI官方 2024</td></tr>
+      <tr><td></td><td>TCF</td><td>257,592</td><td><span class="badge badge-yellow">⚠️ 部分</span></td><td><span class="badge badge-yellow">⚠️ 部分</span></td><td>FEI官方 2024</td></tr>
+      <tr><td></td><td>TEF</td><td>~10万</td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-green">✅</span></td><td>🔶 估算</td></tr>
+      <tr class="highlight-row"><td></td><td>高考法语 (中国)</td><td><strong>~3万</strong></td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-red">❌</span></td><td>教育部 🔶</td></tr>
+
+      <tr class="lang-header"><td colspan="6">🇩🇪 德语 — 小计：~157万 ⭐ 写作+口语维度最大非英语市场</td></tr>
+      <tr class="highlight-row"><td></td><td>Goethe-Zertifikat</td><td><strong>~110万</strong></td><td><span class="badge badge-green">✅ 全级别</span></td><td><span class="badge badge-green">✅ 全级别</span></td><td>Goethe-Institut 2024</td></tr>
+      <tr><td></td><td>telc Deutsch</td><td><strong>~35万</strong></td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-green">✅</span></td><td>telc 2023</td></tr>
+      <tr><td></td><td>TestDaF + DSH + ÖSD</td><td>~9.5万</td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-green">✅</span></td><td>🔶 估算</td></tr>
+      <tr class="highlight-row"><td></td><td>高考德语 (中国)</td><td><strong>~2万</strong></td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-red">❌</span></td><td>教育部 🔶</td></tr>
+
+      <tr class="lang-header"><td colspan="6">🇰🇷 韩语 — 小计：55万</td></tr>
+      <tr><td></td><td>TOPIK</td><td><strong>55万</strong></td><td><span class="badge badge-green">✅ II级</span></td><td><span class="badge badge-red">❌</span></td><td>Korea Times 2025</td></tr>
+
+      <tr class="lang-header"><td colspan="6">🇷🇺 俄语 — 小计：~9万</td></tr>
+      <tr><td></td><td>TORFL (ТРКИ)</td><td>~3-5万</td><td><span class="badge badge-green">✅ 全级别</span></td><td><span class="badge badge-green">✅ 全级别</span></td><td>🔶 无公开统计</td></tr>
+      <tr><td></td><td>高考俄语 (中国)</td><td>~4-5万</td><td><span class="badge badge-green">✅ 30分</span></td><td><span class="badge badge-red">❌</span></td><td>新东方 2023</td></tr>
+
+      <tr class="lang-header"><td colspan="6">🇪🇸 西班牙语 — 小计：~22万</td></tr>
+      <tr><td></td><td>DELE</td><td>~13万</td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-green">✅</span></td><td>Instituto Cervantes 🔶</td></tr>
+      <tr><td></td><td>SIELE</td><td>~5万</td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-green">✅</span></td><td>🔶 估算</td></tr>
+      <tr class="highlight-row"><td></td><td>高考西班牙语 (中国)</td><td><strong>~4万</strong></td><td><span class="badge badge-green">✅</span></td><td><span class="badge badge-red">❌</span></td><td>教育部 🔶</td></tr>
+
+      <tr class="lang-header"><td colspan="6">🇨🇳 中文 — 小计：~72万</td></tr>
+      <tr><td></td><td>HSK</td><td><strong>71.9万</strong></td><td><span class="badge badge-green">✅ 高级</span></td><td><span class="badge badge-red">❌</span></td><td>China Daily 2024</td></tr>
+
+      <tr class="total-row"><td colspan="2"><strong>🌍 全球总计</strong></td><td><strong>~3,726万+/每年</strong></td><td colspan="3">含写作模块: ~3,400万 | 含口语模块: ~1,450万</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <div class="legend" style="margin-top:12px;">
+    <span class="legend-item"><span class="badge badge-green">✅</span> 有该模块</span>
+    <span class="legend-item"><span class="badge badge-red">❌</span> 无该模块</span>
+    <span class="legend-item"><span class="badge badge-yellow">⚠️</span> 部分级别有</span>
+    <span class="legend-item">🔶 数据需进一步验证</span>
+  </div>
+  <div class="note-box" style="margin-top:16px;">
+    <strong><i class="ri-key-line icon-flat"></i> 关键发现：</strong>歌德证书（德语）年度考生约110万，telc Deutsch约35万，德语考试合计约157万，几乎全部包含写作+口语模块，是写作/口语维度最大的非英语考试市场。JLPT（日语）虽有147万考生，但完全没有写作和口语模块。高考小语种（日/法/德/俄/西）合计约69万考生，且近10年呈爆炸式增长。
+  </div>
+</div>
+</div>
+
+
+
+<!-- ============ B.2 高考日语增长趋势 ============ -->
+<div class="section section-white">
+<div class="container">
+  <div class="section-title-bar">
+    <i class="ri-line-chart-line"></i>
+    <h2 style="color:#fff;">B.2 中国高考日语增长趋势（已验证）— 10年增长57倍</h2>
+  </div>
+  <p class="subtitle">从2016年的9,600人增长至2025年的55万人，年复合增长率约55%，是中国最大的非英语考试增量市场</p>
+
+  <div class="grid3" style="margin-bottom:24px;">
+    <div class="card" style="text-align:center;border-top:4px solid var(--accent);">
+      <div class="stat">~57×</div>
+      <p style="font-weight:600;">10年增长倍数</p>
+      <p style="font-size:.8rem;color:var(--sub);">2016→2025</p>
+    </div>
+    <div class="card" style="text-align:center;border-top:4px solid var(--purple);">
+      <div class="stat-purple" style="font-size:2.2rem;font-weight:800;">55万</div>
+      <p style="font-weight:600;">2025年高考日语考生</p>
+      <p style="font-size:.8rem;color:var(--sub);">占全国1,335万考生的4.1%</p>
+    </div>
+    <div class="card" style="text-align:center;border-top:4px solid var(--red);">
+      <div class="stat-red" style="font-size:2.2rem;font-weight:800;">56:1</div>
+      <p style="font-weight:600;">师资缺口比例</p>
+      <p style="font-size:.8rem;color:var(--sub);">日语教师5,025 vs 英语教师281,941</p>
+    </div>
+  </div>
+
+  <div class="card" style="padding:30px;">
+    <h3 style="text-align:center;margin-bottom:20px;">高考日语考生增长趋势 (2016-2025)</h3>
+    <div class="bar-chart" style="height:300px;align-items:flex-end;border-bottom:2px solid #eee;padding-bottom:0;">
+      <div class="bar-col">
+        <div class="bar-value">0.96万</div>
+        <div class="bar" style="height:6px;background:linear-gradient(180deg,#a0d2db,#88c4d0);"></div>
+        <div class="bar-label">2016</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-value">1.6万</div>
+        <div class="bar" style="height:8px;background:linear-gradient(180deg,#8ec5ce,#79b8c4);"></div>
+        <div class="bar-label">2017</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-value">2.3万</div>
+        <div class="bar" style="height:10px;background:linear-gradient(180deg,#7db8c2,#6aabb8);"></div>
+        <div class="bar-label">2018</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-value">4.8万</div>
+        <div class="bar" style="height:21px;background:linear-gradient(180deg,#6aabb8,#57a0ad);"></div>
+        <div class="bar-label">2019</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-value">12.35万</div>
+        <div class="bar" style="height:54px;background:linear-gradient(180deg,#4a9da8,#3890a0);"></div>
+        <div class="bar-label">2020</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-value">~20万</div>
+        <div class="bar" style="height:87px;background:linear-gradient(180deg,#2d8898,#22808e);"></div>
+        <div class="bar-label">2021</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-value">~25万</div>
+        <div class="bar" style="height:109px;background:linear-gradient(180deg,#1a7a86,#12727e);"></div>
+        <div class="bar-label">2022</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-value">~40万</div>
+        <div class="bar" style="height:175px;background:linear-gradient(180deg,#0d6a76,#08626c);"></div>
+        <div class="bar-label">2023</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-value">~49万</div>
+        <div class="bar" style="height:214px;background:linear-gradient(180deg,#065a64,#04525c);"></div>
+        <div class="bar-label">2024</div>
+      </div>
+      <div class="bar-col">
+        <div class="bar-value" style="color:var(--accent);font-size:.85rem;font-weight:800;">55万</div>
+        <div class="bar" style="height:240px;background:linear-gradient(180deg,var(--accent),#00a878);"></div>
+        <div class="bar-label" style="font-weight:700;color:var(--accent);">2025</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="overflow-x:auto;margin-top:24px;">
+  <table>
+    <thead><tr><th>年份</th><th>考生人数</th><th>增长率</th><th>备注</th></tr></thead>
+    <tbody>
+      <tr><td>2016</td><td>9,600</td><td>—</td><td>基准年</td></tr>
+      <tr><td>2017</td><td>16,000</td><td>+67%</td><td></td></tr>
+      <tr><td>2018</td><td>23,000</td><td>+44%</td><td></td></tr>
+      <tr><td>2019</td><td>48,000</td><td><strong style="color:var(--red);">+109%</strong></td><td>爆发式增长</td></tr>
+      <tr><td>2020</td><td>123,500</td><td><strong style="color:var(--red);">+157%</strong></td><td>教育部公布的官方数字</td></tr>
+      <tr><td>2021</td><td>~200,000</td><td>+62%</td><td>不完全统计</td></tr>
+      <tr><td>2022</td><td>~250,000</td><td>+25%</td><td>多机构推算</td></tr>
+      <tr><td>2023</td><td>~400,000</td><td>+60%</td><td>多机构推算</td></tr>
+      <tr><td>2024</td><td>~490,000</td><td>+23%</td><td>含新题型改革</td></tr>
+      <tr class="total-row"><td>2025</td><td><strong>550,000</strong></td><td>+12%</td><td>占全国1,335万考生的4.1%</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="grid2" style="margin-top:20px;">
+    <div class="note-box">
+      <strong><i class="ri-pushpin-line icon-flat"></i> 结构性师资缺口 = AI切入点</strong><br>
+      全国高中日语专任教师仅5,025人 vs 英语教师281,941人。山东省调研显示57%的高中小语种教学由培训机构派遣教师完成，而非学校编制教师。
+    </div>
+    <div class="note-box">
+      <strong><i class="ri-pushpin-line icon-flat"></i> 高中阶段小语种存量巨大</strong><br>
+      高考小语种合计约69万/届（日55万+俄5万+法3万+德2万+西4万），三年级在读存量约193万人，加留学/国际学校方向共计约210万高中阶段小语种学生。
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 营收潜力测算 + TAM/SAM/SOM ============ -->
+<div class="section section-light">
+<div class="container">
+  <div class="section-title-bar" style="background:linear-gradient(135deg,var(--dark),#2d2d5e);">
+    <i class="ri-money-dollar-circle-line"></i>
+    <h2 style="color:#fff;">全球市场营收潜力测算</h2>
+  </div>
+  <p class="subtitle">基于同赛道产品公开数据（Speak $10亿估值 / LexiBot 2年0→35万用户 / Praktika 120万MAU）及产品功能规划，分层测算市场潜力 · 汇率: $1 ≈ ¥7.2</p>
+
+  <h3 style="margin:20px 0 12px;"><span class="accent">❶</span> 全球标准化考试考生 → 营收潜力（年度考生总量: ~3,726万）</h3>
+  <div style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr><th>指标</th><th style="background:#2d6b4f;">🟢 保守</th><th style="background:#4a5568;">🔵 基准</th><th style="background:#8b5e3c;">🟠 乐观</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>全球年度考试考生</td><td>3,726万</td><td>3,726万</td><td>3,726万</td></tr>
+      <tr><td>目标市场渗透率</td><td>2%</td><td>6%</td><td>8%</td></tr>
+      <tr><td><strong>预计注册用户</strong></td><td><strong>74.5万</strong></td><td><strong>223.6万</strong></td><td><strong>298.1万</strong></td></tr>
+      <tr><td>付费转化率</td><td>25%</td><td>35%</td><td>45%</td></tr>
+      <tr><td><strong>付费用户</strong></td><td><strong>18.6万</strong></td><td><strong>78.3万</strong></td><td><strong>134.1万</strong></td></tr>
+      <tr><td style="padding-left:24px;">├ 国内付费用户 (~51%)</td><td>9.5万</td><td>39.9万</td><td>68.4万</td></tr>
+      <tr><td style="padding-left:24px;">└ 海外付费用户 (~49%)</td><td>9.1万</td><td>38.4万</td><td>65.7万</td></tr>
+      <tr style="background:rgba(0,201,167,.05);"><td>国内月ARPU</td><td>¥25</td><td>¥50</td><td>¥70</td></tr>
+      <tr style="background:rgba(0,201,167,.05);"><td>海外月ARPU</td><td>$5 (¥36)</td><td>$10 (¥72)</td><td>$15 (¥108)</td></tr>
+      <tr><td>国内年营收</td><td>¥2,850万</td><td>¥23,940万</td><td>¥57,456万</td></tr>
+      <tr><td>海外年营收</td><td>¥3,931万 ($546万)</td><td>¥33,178万 ($4,608万)</td><td>¥85,147万 ($1.18亿)</td></tr>
+      <tr class="total-row"><td><strong><i class="ri-bar-chart-grouped-line icon-flat"></i> 年化总营收</strong></td><td><strong>¥6,781万<br>($942万)</strong></td><td><strong>¥5.71亿<br>($7,933万)</strong></td><td><strong>¥14.3亿<br>($1.98亿)</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 style="margin:30px 0 12px;"><span class="purple">❷</span> 全球认真语言学习者 → 营收潜力（非英语认真学习者: ~8,275万）</h3>
+  <div class="note-box" style="margin-bottom:16px;">
+    <strong><i class="ri-pushpin-line icon-flat"></i> 说明：</strong>此处聚焦非英语认真学习者（~8,275万），英语市场竞争激烈，单独测算。非英语市场约70%为海外用户、30%为中国用户（高考小语种+留学方向）。
+  </div>
+  <div style="overflow-x:auto;">
+  <table>
+    <thead>
+      <tr><th>指标</th><th style="background:#2d6b4f;">🟢 保守</th><th style="background:#4a5568;">🔵 基准</th><th style="background:#8b5e3c;">🟠 乐观</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>非英语认真学习者</td><td>8,275万</td><td>8,275万</td><td>8,275万</td></tr>
+      <tr><td>目标市场渗透率</td><td>0.5%</td><td>1.5%</td><td>3%</td></tr>
+      <tr><td><strong>预计注册用户</strong></td><td><strong>41.4万</strong></td><td><strong>124.1万</strong></td><td><strong>248.3万</strong></td></tr>
+      <tr><td>付费转化率</td><td>30%</td><td>45%</td><td>60%</td></tr>
+      <tr><td><strong>付费用户</strong></td><td><strong>12.4万</strong></td><td><strong>55.8万</strong></td><td><strong>149.0万</strong></td></tr>
+      <tr><td style="padding-left:24px;">├ 国内付费用户 (~30%)</td><td>3.7万</td><td>16.7万</td><td>44.7万</td></tr>
+      <tr><td style="padding-left:24px;">└ 海外付费用户 (~70%)</td><td>8.7万</td><td>39.1万</td><td>104.3万</td></tr>
+      <tr style="background:rgba(108,99,255,.05);"><td>国内月ARPU</td><td>¥25</td><td>¥50</td><td>¥70</td></tr>
+      <tr style="background:rgba(108,99,255,.05);"><td>海外月ARPU</td><td>$5 (¥36)</td><td>$10 (¥72)</td><td>$15 (¥108)</td></tr>
+      <tr><td>国内年营收</td><td>¥1,110万</td><td>¥10,020万</td><td>¥37,548万</td></tr>
+      <tr><td>海外年营收</td><td>¥3,758万 ($522万)</td><td>¥33,782万 ($4,692万)</td><td>¥135,149万 ($1.88亿)</td></tr>
+      <tr class="total-row"><td><strong><i class="ri-bar-chart-grouped-line icon-flat"></i> 年化总营收</strong></td><td><strong>¥4,868万<br>($676万)</strong></td><td><strong>¥4.38亿<br>($6,083万)</strong></td><td><strong>¥17.3亿<br>($2.4亿)</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="warn-box" style="margin-top:16px;">
+    <strong><i class="ri-error-warning-line icon-flat"></i> 注意：</strong>考试考生与认真学习者存在人群重叠，两组营收不可简单相加。考试考生ARPU更高（刚需+时间压力），认真学习者LTV更长（持续使用）。实际营收取两者的并集。
+  </div>
+
+  <h3 style="margin:30px 0 12px;"><span class="gold">❸</span> TAM / SAM / SOM 分层测算</h3>
+  <div style="overflow-x:auto;">
+  <table>
+    <thead><tr><th>层级</th><th>定义</th><th>规模</th><th>增长</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tag">TAM</span></td><td>全球AI语言学习市场</td><td><strong>$3-5B (2025)</strong></td><td>→ $11-15B by 2030</td></tr>
+      <tr><td><span class="tag-purple tag">SAM</span></td><td>中国AI语言备考+日常练习 (非英语+英语)</td><td><strong>$1.5-3B</strong></td><td>21% CAGR</td></tr>
+      <tr><td><span class="tag-gold tag">SOM Y1</span></td><td>5,000-20,000付费用户 @¥500-1,000/年</td><td>$0.35-2.8M</td><td></td></tr>
+      <tr><td><span class="tag-gold tag">SOM Y2</span></td><td>50,000-100,000付费用户 @¥800-1,200/年</td><td>$5.5-16.5M</td><td></td></tr>
+      <tr><td><span class="tag-gold tag">SOM Y3</span></td><td>200,000-500,000付费用户 @¥1,000-1,500/年</td><td>$27-103M</td><td></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3 style="margin:24px 0 12px;">写作批改TAM按考试拆分（@$50 ARPU, 全球口径）</h3>
+  <div class="grid4" style="font-size:.85rem;">
+    <div class="card" style="padding:16px;text-align:center;border-left:4px solid var(--accent);">
+      <div style="font-size:1.3rem;font-weight:800;color:var(--accent);">$78.5M</div>
+      <p><strong>德语考试合计</strong> 🇩🇪 157万</p>
+      <p style="font-size:.75rem;color:var(--red);">最大非英语整体机会</p>
+    </div>
+    <div class="card" style="padding:16px;text-align:center;border-left:4px solid var(--purple);">
+      <div style="font-size:1.3rem;font-weight:800;color:var(--purple);">$25M</div>
+      <p><strong>DELF/DALF</strong> 🇫🇷 50万</p>
+      <p style="font-size:.75rem;color:var(--purple);">核心切入市场</p>
+    </div>
+    <div class="card" style="padding:16px;text-align:center;border-left:4px solid var(--orange);">
+      <div style="font-size:1.3rem;font-weight:800;color:var(--orange);">$27.5M</div>
+      <p><strong>高考日语</strong> 🇯🇵 55万</p>
+      <p style="font-size:.75rem;color:var(--orange);">中国最大增量</p>
+    </div>
+    <div class="card" style="padding:16px;text-align:center;border-left:4px solid var(--blue);">
+      <div style="font-size:1.3rem;font-weight:800;color:var(--blue);">$20M</div>
+      <p><strong>TOPIK II</strong> 🇰🇷 40万</p>
+    </div>
+    <div class="card" style="padding:16px;text-align:center;border-left:4px solid #999;">
+      <div style="font-size:1.3rem;font-weight:800;color:#999;">$200M</div>
+      <p><strong>IELTS</strong> 🇬🇧 400万</p>
+      <p style="font-size:.75rem;color:var(--red);">竞争激烈</p>
+    </div>
+    <div class="card" style="padding:16px;text-align:center;border-left:4px solid var(--purple);">
+      <div style="font-size:1.3rem;font-weight:800;color:var(--purple);">$18M</div>
+      <p><strong>TCF+TEF</strong> 🇫🇷 36万</p>
+    </div>
+    <div class="card" style="padding:16px;text-align:center;border-left:4px solid var(--red);">
+      <div style="font-size:1.3rem;font-weight:800;color:var(--red);">$25M</div>
+      <p><strong>HSK</strong> 🇨🇳 50万高级</p>
+    </div>
+    <div class="card" style="padding:16px;text-align:center;border-left:4px solid #aaa;">
+      <div style="font-size:1.3rem;font-weight:800;color:#aaa;">$2.5M</div>
+      <p><strong>高考俄语</strong> 🇷🇺 5万</p>
+      <p style="font-size:.75rem;color:var(--accent);">小但零竞争</p>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!-- ============ 商业模式 ============ -->
+<div class="section section-light">
+<div class="container">
+  <h2 style="text-align:center;">商业模式</h2>
+  <p class="subtitle" style="text-align:center;"></p>
+
+  <div class="grid2">
+    <div class="card">
+      <h3><i class="ri-shopping-cart-line icon-flat accent"></i> <span class="accent">定价策略（中国市场）</span></h3>
+      <table>
+        <tr><td><strong>免费层</strong></td><td>每月3-5次批改</td><td style="text-align:right;font-weight:700;color:var(--accent);white-space:nowrap;">¥0</td></tr>
+        <tr><td><strong>充值版</strong></td><td>按Token随用随充 不含AI导师</td><td style="text-align:right;font-weight:700;color:var(--accent);white-space:nowrap;">按需充值</td></tr>
+        <tr><td><strong>标准版</strong></td><td>50次批改+20次口语+词库/笔记全解锁+AI导师</td><td style="text-align:right;font-weight:700;color:var(--accent);white-space:nowrap;">¥49.9/月</td></tr>
+        <tr><td><strong>考试冲刺版</strong></td><td>全功能+AI导师+模考</td><td style="text-align:right;font-weight:700;color:var(--accent);white-space:nowrap;">¥59.9/月</td></tr>
+        <tr><td><strong>机构版</strong></td><td>B2B按学生数计费</td><td style="text-align:right;font-weight:700;color:var(--accent);white-space:nowrap;">定制化企业方案</td></tr>
+      </table>
+    </div>
+    <div class="card">
+      <h3><i class="ri-global-line icon-flat purple"></i> <span class="purple">定价策略（海外市场）</span></h3>
+      <table>
+        <tr><td><strong>Free</strong></td><td>3-5 corrections/month</td><td style="text-align:right;font-weight:700;color:var(--purple);white-space:nowrap;">$0</td></tr>
+        <tr><td><strong>Pay-as-you-go</strong></td><td>Token-based, no AI Tutor</td><td style="text-align:right;font-weight:700;color:var(--purple);white-space:nowrap;">Based on use</td></tr>
+        <tr><td><strong>Standard</strong></td><td>Unlimited corrections+speaking</td><td style="text-align:right;font-weight:700;color:var(--purple);white-space:nowrap;">$9.99/mo</td></tr>
+        <tr><td><strong>Exam Pro</strong></td><td>All features+AI Tutor+Mock</td><td style="text-align:right;font-weight:700;color:var(--purple);white-space:nowrap;">$14.99/mo</td></tr>
+        <tr><td><strong>Institutional</strong></td><td>Per-student B2B licensing</td><td style="text-align:right;font-weight:700;color:var(--purple);white-space:nowrap;">Business Contract</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:24px;">
+    <h3><i class="ri-funds-line icon-flat accent"></i> <span class="accent">经济模型 + 成本优势</span></h3>
+    <div class="grid4" style="margin-top:16px;">
+      <div style="text-align:center;padding:16px;background:rgba(0,201,167,.06);border-radius:12px;">
+        <div style="font-size:12px;color:var(--sub);margin-bottom:4px;">人类教师批改 ¥180/篇</div>
+        <div style="font-size:11px;color:var(--sub);margin-bottom:6px;">vs LangPrepHub AI ¥0.05/篇</div>
+        <div style="font-size:2rem;font-weight:900;color:var(--accent);">3,600×</div>
+        <div style="font-size:12px;font-weight:600;">成本差距</div>
+      </div>
+      <div style="text-align:center;padding:16px;background:rgba(108,99,255,.06);border-radius:12px;">
+        <div style="font-size:12px;color:var(--sub);margin-bottom:4px;">DeepSeek/GLM ¥0.002/1K tokens</div>
+        <div style="font-size:11px;color:var(--sub);margin-bottom:6px;">vs Claude 4.6 ¥0.11/1K tokens</div>
+        <div style="font-size:2rem;font-weight:900;color:var(--purple);">55×</div>
+        <div style="font-size:12px;font-weight:600;">成本差距</div>
+      </div>
+      <div style="text-align:center;padding:16px;background:rgba(255,215,0,.06);border-radius:12px;">
+        <div style="font-size:2rem;font-weight:900;color:var(--gold);">45-60%</div>
+        <div style="font-size:13px;font-weight:600;margin-top:4px;">充值版利润率</div>
+        <div style="font-size:11px;color:var(--sub);margin-top:4px;">用户每充值¥100 → 毛利¥45-60</div>
+      </div>
+      <div style="text-align:center;padding:16px;background:rgba(255,159,67,.06);border-radius:12px;">
+        <div style="font-size:2rem;font-weight:900;color:var(--orange);">35-75%</div>
+        <div style="font-size:13px;font-weight:600;margin-top:4px;">会员版利润率</div>
+        <div style="font-size:11px;color:var(--sub);margin-top:4px;">用户每付费¥120 → 毛利¥42-90</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 增长路径 ============ -->
+<div class="section section-white">
+<div class="container">
+  <h2 style="text-align:center;">增长路径：中国切入，全球扩展</h2>
+  <div class="phase-timeline" style="margin-top:30px;">
+    <div class="phase-item">
+      <h3><span class="accent">Phase 1</span> · M1-8</h3>
+      <p style="font-weight:700;margin-bottom:8px;">日俄法切入</p>
+      <ul style="font-size:.88rem;color:var(--sub);padding-left:18px;">
+        <li>网站+微信小程序首发（避开应用商店碎片化）</li>
+        <li>写作批改+口语对练批改</li>
+        <li>目标：3,500+付费用户</li>
+      </ul>
+    </div>
+    <div class="phase-item">
+      <div style="position:absolute;top:0;left:0;right:0;height:4px;background:var(--purple);border-radius:16px 16px 0 0;"></div>
+      <h3><span class="purple">Phase 2</span> · M6-14</h3>
+      <p style="font-weight:700;margin-bottom:8px;">全栈+日德俄法英</p>
+      <ul style="font-size:.88rem;color:var(--sub);padding-left:18px;">
+        <li>日语(高考55万+JLPT词汇) + 德语(歌德110万+telc 35万)</li>
+        <li>俄语(TORFL+高考俄语增长中)</li>
+        <li>教育机构投资人助力B2B渠道</li>
+        <li>获得语言考试官方认证/权威教育机构认证</li>
+        <li>原生APP + 东南亚北美投放</li>
+        <li>目标：20,000+付费用户</li>
+      </ul>
+    </div>
+    <div class="phase-item">
+      <div style="position:absolute;top:0;left:0;right:0;height:4px;background:var(--gold);border-radius:16px 16px 0 0;"></div>
+      <h3><span class="gold">Phase 3</span> · M14-20</h3>
+      <p style="font-weight:700;margin-bottom:8px;">规模化+国际扩展</p>
+      <ul style="font-size:.88rem;color:var(--sub);padding-left:18px;">
+        <li>中文(HSK全球市场增长中)</li>
+        <li>韩语(TOPIK 55万) + HSK</li>
+        <li>原生APP+欧洲非洲其他地区市场投放</li>
+        <li>机构版+数据壁垒成型</li>
+        <li>目标：50,000+付费用户</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="note-box" style="margin-top:24px;text-align:center;">
+    <strong class="accent">全栈平台 = 留存引擎</strong> — 写作→口语→词汇→下一级考试，形成持续使用闭环。考试备考定位驱动2-3x高于休闲学习的ARPU和转化率。
+  </div>
+</div>
+</div>
+
+<!-- ============ C.1+C.2 运营成本对比 ============ -->
+<div class="section section-light">
+<div class="container">
+  <div class="section-title-bar" style="background:linear-gradient(135deg,#2d4a3e,var(--dark));">
+    <i class="ri-file-list-3-line"></i>
+    <h2 style="color:#fff;">一年期研发运营成本估算 — 国内 vs 海外对比</h2>
+  </div>
+
+  <div class="warn-box" style="background:linear-gradient(135deg,rgba(0,201,167,.12),rgba(108,99,255,.08));border-left:4px solid var(--accent);margin-bottom:24px;">
+    <strong style="font-size:1.05rem;"><i class="ri-pushpin-line icon-flat"></i> 数据说明：</strong>以下成本估算基于同类型及同赛道产品（Speak、Praktika AI、批改网、SavoirX等）的公开数据及网络信息，结合LangPrepHub实际产品功能和路线规划进行综合测算。所有金额统一使用<strong>人民币(¥)计价</strong>，海外成本按 <strong>$1 = ¥7.2</strong> 换算。
+  </div>
+
+  <div class="cost-compare" style="background:#fff;border-radius:16px;box-shadow:0 4px 24px rgba(0,0,0,.08);overflow:hidden;">
+    <div class="cost-col" style="background:rgba(0,201,167,.03);">
+      <div style="text-align:center;padding:16px;background:var(--accent);color:#fff;border-radius:12px;margin-bottom:16px;">
+        <h3 style="margin:0;color:#fff;"><i class="ri-building-4-line"></i> 国内运营（青岛基地）</h3>
+        <p style="font-size:.85rem;opacity:.9;">6-8人团队 · 青岛比北京/上海低40-60%</p>
+      </div>
+      <table style="font-size:.85rem;">
+        <thead><tr><th>成本项目</th><th>年度估算 (¥)</th></tr></thead>
+        <tbody>
+          <tr><td colspan="2" style="background:rgba(0,201,167,.08);font-weight:700;">研发团队 (6-8人)</td></tr>
+          <tr><td>　全栈工程师 ×2</td><td>¥50-70万</td></tr>
+          <tr><td>　AI/NLP工程师 ×1-2</td><td>¥30-60万</td></tr>
+          <tr><td>　前端/小程序 ×1</td><td>¥20-30万</td></tr>
+          <tr><td>　产品经理 ×1</td><td>¥20-30万</td></tr>
+          <tr><td>　内容运营/语言专家 ×1-2</td><td>¥20-40万</td></tr>
+          <tr style="background:rgba(0,201,167,.06);"><td><strong>人员小计</strong></td><td><strong>¥140-230万</strong></td></tr>
+          <tr><td>AI API成本</td><td>¥7-35万</td></tr>
+          <tr><td>云服务器</td><td>¥14-35万</td></tr>
+          <tr><td>市场推广</td><td>¥100-150万</td></tr>
+          <tr><td>内容制作</td><td>¥35-70万</td></tr>
+          <tr><td>合规与许可</td><td>¥5-15万</td></tr>
+          <tr><td>办公/杂项</td><td>¥10-20万</td></tr>
+          <tr class="total-row"><td><strong>合计</strong></td><td><strong>¥310-560万</strong></td></tr>
+        </tbody>
+      </table>
+      <div class="cost-total" style="background:rgba(0,201,167,.15);color:#00805a;">
+        中值 ≈ ¥430万 ($60万)
+      </div>
+    </div>
+
+    <div class="cost-col" style="background:rgba(108,99,255,.03);">
+      <div style="text-align:center;padding:16px;background:var(--purple);color:#fff;border-radius:12px;margin-bottom:16px;">
+        <h3 style="margin:0;color:#fff;"><i class="ri-earth-line"></i> 海外运营（欧洲/北美）</h3>
+        <p style="font-size:.85rem;opacity:.9;">6-8人团队 · 成本为国内的1.8-2倍</p>
+      </div>
+      <table style="font-size:.85rem;">
+        <thead><tr><th>成本项目</th><th>年度估算 (¥)</th><th>对比</th></tr></thead>
+        <tbody>
+          <tr><td colspan="3" style="background:rgba(108,99,255,.08);font-weight:700;">研发团队 (6-8人)</td></tr>
+          <tr><td>　全栈+AI+前端+PM</td><td>¥288-504万</td><td><span class="badge badge-red">1.5-2.5×</span></td></tr>
+          <tr><td colspan="3" style="font-size:.78rem;color:var(--sub);">　西欧/北美全栈 $80-120K/人</td></tr>
+          <tr style="background:rgba(108,99,255,.06);"><td><strong>人员小计</strong></td><td><strong>¥288-504万</strong></td><td><span class="badge badge-red">2×</span></td></tr>
+          <tr><td>AI API成本</td><td>¥14.4-57.6万</td><td><span class="badge badge-yellow">1-2×</span></td></tr>
+          <tr><td>云服务器 (AWS+GDPR)</td><td>¥21.6-57.6万</td><td><span class="badge badge-yellow">1.5×</span></td></tr>
+          <tr><td>市场推广 (Google/Meta)</td><td>¥144-288万</td><td><span class="badge badge-red">1.5-2×</span></td></tr>
+          <tr><td>内容制作</td><td>¥57.6-108万</td><td><span class="badge badge-yellow">1.5×</span></td></tr>
+          <tr><td>合规 (GDPR+EU AI Act)</td><td>¥14.4-43.2万</td><td><span class="badge badge-red">2-3×</span></td></tr>
+          <tr><td>办公/杂项</td><td>¥21.6-43.2万</td><td><span class="badge badge-red">2×</span></td></tr>
+          <tr class="total-row"><td><strong>合计</strong></td><td><strong>¥562-1,102万</strong></td><td><span class="badge badge-red">1.8-2×</span></td></tr>
+        </tbody>
+      </table>
+      <div class="cost-total" style="background:rgba(108,99,255,.15);color:#4a3d9e;">
+        中值 ≈ ¥792万 ($110万)
+      </div>
+    </div>
+  </div>
+
+  <div class="grid3" style="margin-top:24px;">
+    <div class="card" style="text-align:center;border-top:4px solid var(--accent);">
+      <div style="font-size:2.2rem;font-weight:800;color:var(--accent);">45-55%</div>
+      <p style="font-weight:600;">国内成本仅为海外的</p>
+    </div>
+    <div class="card" style="text-align:center;border-top:4px solid var(--purple);">
+      <div style="font-size:2.2rem;font-weight:800;color:var(--purple);">¥700-1,500万</div>
+      <p style="font-weight:600;">融资目标 ($1-2M)</p>
+      <p style="font-size:.8rem;color:var(--sub);">支撑12-18个月全栈MVP+初始获客</p>
+    </div>
+    <div class="card" style="text-align:center;border-top:4px solid var(--gold);">
+      <div style="font-size:2.2rem;font-weight:800;color:var(--gold);">40-60%</div>
+      <p style="font-weight:600;">青岛人力成本优势</p>
+      <p style="font-size:.8rem;color:var(--sub);">相对北京/上海</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 数据飞轮与项目壁垒 ============ -->
+<div class="section section-light">
+<div class="container">
+  <div class="section-title-bar" style="background:linear-gradient(135deg,#1a4a3e,#1a1a2e);">
+    <i class="ri-refresh-line"></i>
+    <h2 style="color:#fff;">数据飞轮与项目壁垒</h2>
+  </div>
+  <p class="subtitle">AI功能颠覆性爆发：对于辅助外语学习，AI一年前达不到如此高的智能程度；对于功能开发，AI半年前达不到如此低的成本</p>
+
+  <div class="flywheel">
+    <div class="fw-box" style="border-top-color:var(--accent);">
+      <h3 style="color:var(--accent);"><i class="ri-upload-line icon-flat"></i> 用户提交练习</h3>
+      <p style="color:var(--sub);font-size:.9rem;">写作 / 口语 / 听写</p>
+      <p style="color:var(--sub);font-size:.9rem;">海量真实语料积累</p>
+    </div>
+    <div class="fw-arrow" style="color:var(--accent);">→</div>
+    <div class="fw-box" style="border-top-color:var(--blue);">
+      <h3 style="color:var(--blue);"><i class="ri-cpu-line icon-flat"></i> AI 模型优化</h3>
+      <p style="color:var(--sub);font-size:.9rem;">按母语背景分析</p>
+      <p style="color:var(--sub);font-size:.9rem;">优化纠错精准度</p>
+    </div>
+
+    <div class="fw-arrow" style="transform:rotate(-90deg);color:var(--accent);">→</div>
+    <div></div>
+    <div class="fw-arrow" style="transform:rotate(90deg);color:var(--blue);">→</div>
+
+    <div class="fw-box" style="border-top-color:var(--orange);">
+      <h3 style="color:var(--orange);"><i class="ri-megaphone-line icon-flat"></i> 口碑传播增长</h3>
+      <p style="color:var(--sub);font-size:.9rem;">自然推荐扩散</p>
+      <p style="color:var(--sub);font-size:.9rem;">降低获客成本</p>
+      <p style="color:var(--sub);font-size:.9rem;">先发优势 + 赛道蓝海</p>
+    </div>
+    <div class="fw-arrow" style="color:var(--purple);">←</div>
+    <div class="fw-box purple-top">
+      <h3 style="color:var(--purple);"><i class="ri-emotion-happy-line icon-flat"></i> 用户体验提升</h3>
+      <div style="background:rgba(108,99,255,.06);border-radius:8px;padding:8px;margin-top:4px;">
+        <p style="font-size:.85rem;">市场无相似产品功能</p>
+        <p style="font-size:.85rem;">更精准的反馈</p>
+        <p style="font-size:.85rem;">更高满意度和留存</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="margin-top:40px;">
+    <h3 style="text-align:center;margin-bottom:20px;"><i class="ri-shield-star-line icon-flat accent"></i> 四层护城河</h3>
+    <div class="grid4">
+      <div class="card" style="border-top:4px solid var(--accent);text-align:center;position:relative;">
+        <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--accent);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;">1</div>
+        <i class="ri-database-2-line" style="font-size:2rem;color:var(--accent);margin:12px 0;display:block;"></i>
+        <h3 style="font-size:1rem;">母语错误模式数据</h3>
+        <p style="font-size:.82rem;color:var(--sub);">按母语背景（中→法/日/德等）构建独有错误模式数据库，用户越多数据越精准</p>
+        <p style="margin-top:8px;"><span class="badge badge-green">不可复制</span></p>
+      </div>
+      <div class="card" style="border-top:4px solid var(--blue);text-align:center;position:relative;">
+        <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--blue);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;">2</div>
+        <i class="ri-focus-3-line" style="font-size:2rem;color:var(--blue);margin:12px 0;display:block;"></i>
+        <h3 style="font-size:1rem;">考试评分校准</h3>
+        <p style="font-size:.82rem;color:var(--sub);">基于真实考试评分标准校准模型，持续用真题和考生成绩优化</p>
+        <p style="margin-top:8px;"><span class="badge badge-blue">持续优化</span></p>
+      </div>
+      <div class="card" style="border-top:4px solid var(--purple);text-align:center;position:relative;">
+        <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--purple);color:#fff;width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;">3</div>
+        <i class="ri-lock-line" style="font-size:2rem;color:var(--purple);margin:12px 0;display:block;"></i>
+        <h3 style="font-size:1rem;">训练数据独占 &<br>技术开发成本优势</h3>
+        <p style="font-size:.82rem;color:var(--sub);">每次批改强化模型，数据壁垒随规模增长；青岛基地成本仅为海外45-55%</p>
+        <p style="margin-top:8px;"><span class="badge badge-yellow">规模效应</span></p>
+      </div>
+      <div class="card" style="border-top:4px solid var(--gold);text-align:center;position:relative;">
+        <div style="position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--gold);color:var(--dark);width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.85rem;">4</div>
+        <i class="ri-stack-line" style="font-size:2rem;color:var(--gold);margin:12px 0;display:block;"></i>
+        <h3 style="font-size:1rem;">全栈平台整合壁垒 &<br>产品设计优势</h3>
+        <p style="font-size:.82rem;color:var(--sub);">写作+口语+听写+词汇+变位+AI导师的全栈整合，竞品需1-3年追赶</p>
+        <p style="margin-top:8px;"><span class="badge badge-red">1-3年领先</span></p>
+      </div>
+    </div>
+  </div>
+
+  <div style="background:var(--dark);border-radius:16px;padding:20px 32px;margin-top:28px;text-align:center;">
+    <p style="color:var(--accent);font-weight:700;font-size:1rem;letter-spacing:1px;">
+      <i class="ri-shield-star-line"></i> 四层护城河路径
+    </p>
+    <p style="color:#fff;font-size:1.05rem;margin-top:8px;">
+      <span style="color:var(--accent);">母语错误模式数据</span>
+      <span style="color:rgba(255,255,255,.4);margin:0 12px;">→</span>
+      <span style="color:var(--blue);">考试评分校准</span>
+      <span style="color:rgba(255,255,255,.4);margin:0 12px;">→</span>
+      <span style="color:var(--purple);">训练数据独占 & 技术开发成本优势</span>
+      <span style="color:rgba(255,255,255,.4);margin:0 12px;">→</span>
+      <span style="color:var(--gold);">全栈平台整合壁垒 & 产品设计优势</span>
+    </p>
+  </div>
+</div>
+</div>
+
+<!-- ============ 项目成本与分发优势 ============ -->
+<div class="section section-dark">
+<div class="container">
+  <h2 style="text-align:center;">项目成本与分发优势</h2>
+  <div class="grid2" style="margin-top:24px;">
+    <div>
+      <h3 style="color:var(--accent);margin-bottom:16px;"><i class="ri-building-4-line icon-flat"></i> 研发+产品+运维：节省60-75% （12个月）</h3>
+      <div class="card card-dark" style="margin-bottom:12px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span>软件开发/产品经理/测试</span><strong style="color:var(--accent);">¥45-58.5万</strong>
+        </div>
+        <p style="font-size:.8rem;color:rgba(255,255,255,.5);">传统模式同功能产品 ¥113-230万</p>
+      </div>
+      <div class="card card-dark" style="margin-bottom:12px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span>UI/UX设计</span><strong style="color:var(--accent);">¥8000-2.5万</strong>
+        </div>
+        <p style="font-size:.8rem;color:rgba(255,255,255,.5);">北京 ¥2-3万</p>
+      </div>
+      <div class="card card-dark" style="margin-bottom:12px;">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span>项目+软件运维成本</span><strong style="color:var(--accent);">办公：¥0/月完全远程+项目协作制 网站运维成本：30000/年</strong>
+        </div>
+      </div>
+      <div class="card card-dark">
+        <div style="display:flex;justify-content:space-between;align-items:center;">
+          <span>AI token消耗</span><strong style="color:var(--gold);">研发成本：42000/年 用户：0.4/人</strong>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3 style="color:var(--purple);margin-bottom:16px;"><i class="ri-smartphone-line icon-flat"></i> 分发策略</h3>
+      <div class="card card-dark" style="margin-bottom:12px;">
+        <h3 style="font-size:1rem;"><i class="ri-group-line icon-flat" style="color:var(--accent);"></i> 教育行业投资人网络</h3>
+        <p style="font-size:.88rem;color:rgba(255,255,255,.7);">拥有触达教育赛道资源 · 可直接触达相关机构 · B2B渠道CAC比C端低50-70%</p>
+      </div>
+      <div class="card card-dark" style="margin-bottom:12px;">
+        <h3 style="font-size:1rem;"><i class="ri-wechat-line icon-flat" style="color:var(--accent);"></i> 微信生态首发</h3>
+        <p style="font-size:.88rem;color:rgba(255,255,255,.7);">14亿MAU · 内置支付 · 小程序分发 · 避开6+安卓商店审核碎片化</p>
+      </div>
+      <div class="card card-dark">
+        <h3 style="font-size:1rem;"><i class="ri-video-line icon-flat" style="color:var(--accent);"></i> 教育产业圈CtoC</h3>
+        <p style="font-size:.88rem;color:rgba(255,255,255,.7);">通过创始人语言背景触达相关需求学生群体</p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+
+
+<!-- ============ 融资计划 ============ -->
+<div class="section section-dark">
+<div class="container">
+  <h2 style="text-align:center;">融资计划</h2>
+  <p style="text-align:center;color:rgba(255,255,255,.6);margin-bottom:30px;">种子轮 · Pre-Seed / Seed · 20个月跑道</p>
+
+  <div class="grid2" style="margin-bottom:30px;">
+    <div class="card card-dark" style="text-align:center;">
+      <p style="color:var(--sub);">融资金额</p>
+      <div class="stat">¥185-425万</div>
+      <p style="color:rgba(255,255,255,.5);">估值¥2,100-3,200万，开启对外融资</p>
+    </div>
+    <div class="card card-dark" style="text-align:center;">
+      <p style="color:var(--sub);">目标估值 (25,000付费用户)</p>
+      <div class="stat-purple" style="font-size:2.2rem;font-weight:800;">¥2,100-3,200万</div>
+      <p style="color:rgba(255,255,255,.5);">$3.5M-6M · 基于10-12x前瞻收入倍数</p>
+    </div>
+  </div>
+
+  <div class="grid4">
+    <div class="card card-dark" style="text-align:center;">
+      <div style="font-size:2rem;font-weight:800;color:var(--accent);">40%</div>
+      <p style="font-weight:600;">产品技术研发</p>
+      <p style="font-size:.8rem;color:rgba(255,255,255,.5);">3-5人团队 · 全栈模块</p>
+    </div>
+    <div class="card card-dark" style="text-align:center;">
+      <div style="font-size:2rem;font-weight:800;color:var(--purple);">35%</div>
+      <p style="font-weight:600;">市场获客</p>
+      <p style="font-size:.8rem;color:rgba(255,255,255,.5);">微信+抖音 · 机构BD</p>
+    </div>
+    <div class="card card-dark" style="text-align:center;">
+      <div style="font-size:2rem;font-weight:800;color:var(--gold);">10%</div>
+      <p style="font-weight:600;">公司营运+其他成本</p>
+      <p style="font-size:.8rem;color:rgba(255,255,255,.5);">备案 · 法务· 官方合作认证</p>
+    </div>
+    <div class="card card-dark" style="text-align:center;">
+      <div style="font-size:2rem;font-weight:800;color:var(--orange);">15%</div>
+      <p style="font-weight:600;">市场策略+品牌推广</p>
+      <p style="font-size:.8rem;color:rgba(255,255,255,.5);">AI+内容运营人才</p>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ============ 里程碑 ============ -->
+<div class="section section-white">
+<div class="container">
+  <h2 style="text-align:center;">20个月里程碑</h2>
+  <div style="margin-top:30px;">
+    <div style="display:flex;gap:24px;flex-wrap:wrap;justify-content:center;">
+      <div class="card" style="flex:1;min-width:200px;max-width:280px;border-left:4px solid var(--accent);">
+        <span class="tag">M5</span>
+        <p style="margin-top:8px;font-weight:600;">法/英/俄/日公测版上线</p>
+        <p style="font-size:.85rem;color:var(--sub);">微信小程序发布</p>
+      </div>
+      <div class="card" style="flex:1;min-width:200px;max-width:280px;border-left:4px solid var(--purple);">
+        <span class="tag-purple tag">M8</span>
+        <p style="margin-top:8px;font-weight:600;">3,500+ 付费用户</p>
+        <p style="font-size:.85rem;color:var(--sub);">项目估值 ¥500万 · B2B启动</p>
+      </div>
+      <div class="card" style="flex:1;min-width:200px;max-width:280px;border-left:4px solid var(--blue);">
+        <span class="tag" style="background:var(--blue);">M10</span>
+        <p style="margin-top:8px;font-weight:600;">5语种完整版上线</p>
+        <p style="font-size:.85rem;color:var(--sub);">开启官方授权+认证合作</p>
+      </div>
+      <div class="card" style="flex:1;min-width:200px;max-width:280px;border-left:4px solid var(--gold);">
+        <span class="tag-gold tag">M14</span>
+        <p style="margin-top:8px;font-weight:600;">20,000+ 付费用户</p>
+        <p style="font-size:.85rem;color:var(--sub);">项目估值 ¥1,000-1,500万</p>
+      </div>
+      <div class="card" style="flex:1;min-width:200px;max-width:280px;border-left:4px solid var(--red);">
+        <span class="tag-red tag">M20</span>
+        <p style="margin-top:8px;font-weight:600;">7语种 · 120K+ 用户</p>
+        <p style="font-size:.85rem;color:var(--sub);">对外Series A融资启动</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<div style="background:var(--dark);padding:40px 5%;text-align:center;color:rgba(255,255,255,.6);">
+  <p style="font-size:1.3rem;color:var(--accent);font-weight:700;margin-bottom:8px;">LangPrepHub</p>
+  <p>· 全球首个 AI 全栈语言考试备考平台 ·</p>
+  <p style="margin-top:12px;color:rgba(255,255,255,.4);">langprephub.com · 2026年4月 · v3.0 综合版</p>
+  <p style="margin-top:8px;font-size:.75rem;color:rgba(255,255,255,.3);">数据截至2026年4月 · 所有🔶标注数据需进一步验证 · 本报告整合三份独立研究及用户提供一手数据</p>
+</div>
+
+</body>
+</html>
